@@ -1,0 +1,9 @@
+nav[aria-label="breadcrumb"] {
+    color : $text-color-reduced;
+    order : -3;
+
+    @include media-breakpoint-down(sm) {
+        font-size     : $font-size-small;
+        margin-bottom : map_get($spacers, 3);
+    }
+}

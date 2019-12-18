@@ -1,0 +1,61 @@
+.navbar {
+    border: none;
+
+    a {
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+        margin-right: 5px;
+    }
+
+    &-brand {
+        margin-right: 0;
+
+        a {
+            &:hover {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        img {
+            height: 70px;
+            margin-left: -5px;
+
+            @include media-breakpoint-down(sm) {
+                height: 40px;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &-right {
+        margin-right: - map_get($spacers, 3);
+
+        @include media-breakpoint-down(sm) {
+            & > li > a {
+                padding-left: map_get($spacers, 3);
+            }
+        }
+    }
+
+    &-title {
+        color: white;
+        font-family: $headings-font-family;
+        font-size: 1.1rem;
+        margin-top: -10px;
+        border-left: 2px solid transparentize(white, 0.25);
+        padding-left: 15px;
+        margin-left: 5px;
+        line-height: 1.8;
+
+        &:hover {
+            color: transparentize(white, 0.25);
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+/* Override Choices.js styles; do not want "Press to select" text, as it takes
+ * too much room. */
+.choices__list--dropdown {
+    transform: translateZ(0);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    .choices__list {
+        z-index: 1;
+    }
+
+    .choices__group {
+        &.is-sticky {
+            position: fixed;
+            top: 44px; // Search input height
+            z-index: 1;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.078);
+        }
+    }
+
+    .choices__item--selectable {
+        padding-right: 0;
+    }
+
+    .choices__item--selectable:after {
+        display: none;
+    }
+
+    .choices__heading {
+        font-size: $font-size-small;
+        font-weight: normal;
+        color: white;
+        background-color: $text-color-reduced;
+    }
+}
+
+.choices__packagename {
+    font-size: $font-size-small;
+    color: $text-color-secondary;
+}

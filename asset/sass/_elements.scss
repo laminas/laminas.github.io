@@ -1,0 +1,49 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    word-wrap: break-word;
+    line-height: 1.1;
+
+    code {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+code {
+    word-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+}
+
+blockquote {
+    background-color: lighten($separater-color, 3%);
+    padding: map_get($spacers, 4) map_get($spacers, 4) 0;
+    margin-bottom: $spacer;
+    border-left: 5px solid #eee;
+
+    @include font-size($blockquote-font-size);
+
+    h3 {
+        margin-top: 0;
+        margin-bottom: $spacer;
+        font-weight: 400;
+
+        @include font-size($blockquote-font-size * 1.4);
+    }
+}
+
+pre,
+pre[class*="language-"] {
+    font-size: 13px;
+    border-radius: 0;
+    border: none;
+    background-color: $header-footer-bg-color;
+    margin-top: map_get($spacers, 3);
+    margin-bottom: map_get($spacers, 3);
+}

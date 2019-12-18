@@ -1,0 +1,25 @@
+.component-selector {
+    padding: 0 0 map_get($spacers, 3) map_get($spacers, 3);
+
+    @include media-breakpoint-down(sm) {
+        padding: map_get($spacers, 3) map_get($spacers, 3);
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        color: $text-color-reduced;
+        margin: 0 0 map_get($spacers, 1);
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        font-weight: 300;
+        color: $text-color-reduced;
+        margin-top: 0;
+        margin-bottom: map_get($spacers, 3);
+    }
+
+    &__control {
+
+    }
+}

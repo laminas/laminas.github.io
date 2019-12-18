@@ -1,0 +1,30 @@
+.nav-tabs {
+    margin-top: map_get($spacers, 3);
+
+    .nav-item {
+        .nav-link {
+            color: grey;
+            background-color: #eee;
+            margin-right: 3px;
+            border-radius: 0;
+            border: none;
+
+            &.active {
+                color: white;
+                background-color: #3c4146;
+            }
+
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+}
+
+.tab {
+    &-pane {
+        pre {
+            margin-top: 0;
+        }
+    }
+}

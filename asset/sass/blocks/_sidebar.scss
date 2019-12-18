@@ -1,0 +1,10 @@
+.sidebar {
+    position: sticky;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: map_get($spacers, 3);
+
+    @include media-breakpoint-down(sm) {
+        display: none;
+    }
+}

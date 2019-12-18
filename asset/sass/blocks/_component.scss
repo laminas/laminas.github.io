@@ -1,0 +1,35 @@
+.component {
+    @include make-col(6);
+
+    &-list {
+        &__group-name {
+
+        }
+    }
+
+    &__link {
+        display: block;
+        border: 1px solid $separater-color;
+        min-height: 200px;
+        padding: map_get($spacers, 3) map_get($spacers, 3) map_get($spacers, 3);
+        margin: map_get($spacers, 3) 0;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $separater-color;
+        }
+    }
+
+    &__name {
+        margin-top: 0;
+    }
+
+    &__package {
+        font-size: $font-size-small;
+    }
+
+    &__description {
+        color: $body-color;
+        margin-bottom: 0;
+    }
+}

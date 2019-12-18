@@ -1,0 +1,22 @@
+.version-selector {
+    display: inline;
+
+    .dropdown {
+        &-toggle {
+            padding: 8px 13px;
+            background-color: $brand-primary;
+            border-color: transparentize($header-footer-font-color, 0.7);
+            color: $header-footer-font-color;
+        }
+
+        &-menu {
+            color: $body-color;
+            border: 1px solid $separater-color;
+            box-shadow: none;
+
+            &__item {
+
+            }
+        }
+    }
+}

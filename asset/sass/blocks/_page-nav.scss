@@ -1,0 +1,36 @@
+.page-nav {
+    list-style-type: none;
+    border-bottom: 1px solid darken($separater-color, 10%);
+    display: table;
+    width: 100%;
+    margin-top: map_get($spacers, 3);
+    margin-bottom: map_get($spacers, 3);
+    padding: 0 0 map_get($spacers, 3);
+
+    @include media-breakpoint-down(sm) {
+        margin-top: map_get($spacers, 3);
+        margin-bottom: 0
+    }
+
+    &__item {
+        display: table-cell;
+
+        &:first-child {
+            text-align: left;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    &__link {
+        border: none;
+        color: lighten($body-color, 15%);
+
+        &:hover {
+            text-decoration: none;
+            color: $link-color;
+        }
+    }
+}

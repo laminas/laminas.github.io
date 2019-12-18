@@ -1,0 +1,50 @@
+.header {
+    background-color: var(--primary-color);
+    margin-bottom: map_get($spacers, 5);
+    padding: map_get($spacers, 3) 0;
+
+    &__title {
+        font-size: 30px;
+        font-weight: 300;
+        margin: 0;
+        color: white;
+        word-break: normal;
+    }
+
+    &__subtitle {
+        color: transparentize(white, 0.3);
+        font-size: 20px;
+        font-weight: 300;
+
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+    }
+
+    &__link {
+        color: white;
+        font-size: 15px;
+        display: inline-block;
+        padding: map_get($spacers, 1) 0 0 map_get($spacers, 3);
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            outline: 0;
+        }
+
+        i {
+            font-size: 1.2em;
+        }
+
+        &--search {
+        }
+
+        @include media-breakpoint-down(sm) {
+            &--components,
+            &--github {
+                display: none;
+            }
+        }
+    }
+}

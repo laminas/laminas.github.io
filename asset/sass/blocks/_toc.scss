@@ -1,0 +1,42 @@
+.toc {
+    /*margin-left: map_get($spacers, 3);*/
+    /*margin-top: 0;*/
+    /*margin-bottom: map_get($spacers, 5);
+    order: -1;*/
+
+    top: 3rem;
+    margin-top: 6rem;
+    position: sticky;
+    border-right: 1px solid $separater-color;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: map_get($spacers, 3);
+    }
+
+    &__headline {
+        color: $text-color-reduced;
+        margin: 0 0 map_get($spacers, 2);
+        font-size: $font-size-base;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+        font-size: $font-size-small;
+
+        &-item {
+            border: none;
+        }
+    }
+
+    &__link {
+        padding: 2px 0;
+        display: block;
+
+        &:link,
+        &:visited {
+            color: $text-color-secondary;
+        }
+    }
+}
