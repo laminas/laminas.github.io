@@ -27,6 +27,13 @@ $link-color: $brand-primary;
 
 $primary: $brand-primary;
 
+$theme-colors: (
+  "laminas":     #E64010,
+  "mvc":         #009EE3,
+  "api-tools":   #E5007D,
+  "mezzio":      #009655,
+);
+
 // Font
 $font-family-sans-serif: 'Open Sans', sans-serif;
 $font-size-base: 0.95rem;
