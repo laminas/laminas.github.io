@@ -1,0 +1,485 @@
+[
+  {
+    "name": "Tutorials",
+    "package": "laminas/tutorials",
+    "url": "https://docs.laminas.dev/tutorials",
+    "group": "learn",
+    "description": "Learn how to create zend-mvc applications, get in-depth guides into components, and discover how to migrate your applications to version 3!"
+  },
+  {
+    "name": "Authentication",
+    "package": "laminas/laminas-authentication",
+    "url": "https://docs.laminas.dev/laminas-authentication",
+    "group": "components",
+    "description": "Authenticate users via a variety of adapters, and provide the authenticated identity to your application."
+  },
+  {
+    "name": "Barcode",
+    "package": "laminas/laminas-barcode",
+    "url": "https://docs.laminas.dev/laminas-barcode",
+    "group": "components",
+    "description": "Programmatically create and render barcodes as images or in PDFs."
+  },
+  {
+    "name": "Cache",
+    "package": "laminas/laminas-cache",
+    "url": "https://docs.laminas.dev/laminas-cache/",
+    "group": "components",
+    "description": "Caching implementation with a variety of storage options, as well as codified caching strategies for callbacks, classes, and output."
+  },
+  {
+    "name": "Captcha",
+    "package": "laminas/laminas-captcha",
+    "url": "https://docs.laminas.dev/laminas-captcha/",
+    "group": "components",
+    "description": "Generate and validate CAPTCHAs using Figlets, images, ReCaptcha, and more."
+  },
+  {
+    "name": "Code",
+    "package": "laminas/laminas-code",
+    "url": "https://docs.laminas.dev/laminas-code/",
+    "group": "components",
+    "description": "Extensions to the PHP Reflection API, static code scanning, and code generation."
+  },
+  {
+    "name": "Component Installer",
+    "package": "laminas/laminas-component-installer",
+    "url": "https://docs.laminas.dev/laminas-component-installer/",
+    "group": "projects",
+    "description": "Composer plugin for injecting modules and configuration providers into application configuration."
+  },
+  {
+    "name": "Config",
+    "package": "laminas/laminas-config",
+    "url": "https://docs.laminas.dev/laminas-config/",
+    "group": "components",
+    "description": "Read and write configuration files."
+  },
+  {
+    "name": "ConfigAggregator",
+    "package": "laminas/laminas-config-aggregator",
+    "url": "https://docs.laminas.dev/laminas-config-aggregator/",
+    "group": "components",
+    "description": "Lightweight library for collecting and merging configuration from different sources."
+  },
+  {
+    "name": "ConfigAggregator ModuleManager Plugin",
+    "package": "laminas/laminas-config-aggregator-modulemanager",
+    "url": "https://docs.laminas.dev/laminas-config-aggregator-modulemanager/",
+    "group": "components",
+    "description": "Consume zend-mvc modules as configuration providers within zend-config-aggregator."
+  },
+  {
+    "name": "ConfigAggregator Templated Parameters PostProcessor",
+    "package": "laminas/laminas-config-aggregator-parameters",
+    "url": "https://docs.laminas.dev/laminas-config-aggregator-parameters/",
+    "group": "components",
+    "description": "PostProcessor extension for laminas/laminas-config-aggregator to allow usage of templated parameters within your configuration."
+  },
+  {
+    "name": "Console",
+    "package": "laminas/laminas-console",
+    "url": "https://docs.laminas.dev/laminas-console/",
+    "group": "components",
+    "description": "[DEPRECATED] Build console applications using getopt syntax or routing, complete with prompts"
+  },
+  {
+    "name": "Crypt",
+    "package": "laminas/laminas-crypt",
+    "url": "https://docs.laminas.dev/laminas-crypt/",
+    "group": "components",
+    "description": "Strong cryptography tools and password hashing."
+  },
+  {
+    "name": "DB",
+    "package": "laminas/laminas-db",
+    "url": "https://docs.laminas.dev/laminas-db/",
+    "group": "components",
+    "description": "Database abstraction layer, SQL abstraction, result set abstraction, and RowDataGateway and TableDataGateway implementations."
+  },
+  {
+    "name": "DI",
+    "package": "laminas/laminas-di",
+    "url": "https://docs.laminas.dev/laminas-di/",
+    "group": "components",
+    "description": "Automated dependency injection and instance manager."
+  },
+  {
+    "name": "Diactoros",
+    "package": "laminas/laminas-diactoros",
+    "url": "https://docs.laminas.dev/laminas-diactoros/",
+    "group": "components",
+    "description": "PSR-7 HTTP message implementations."
+  },
+  {
+    "name": "DOM",
+    "package": "laminas/laminas-dom",
+    "url": "https://docs.laminas.dev/laminas-dom/",
+    "group": "components",
+    "description": "Query HTML and XML documents using XPath or CSS selectors."
+  },
+  {
+    "name": "Escaper",
+    "package": "laminas/laminas-escaper",
+    "url": "https://docs.laminas.dev/laminas-escaper/",
+    "group": "components",
+    "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs."
+  },
+  {
+    "name": "EventManager",
+    "package": "laminas/laminas-eventmanager",
+    "url": "https://docs.laminas.dev/laminas-eventmanager/",
+    "group": "components",
+    "description": "Implement events, signal slots, aspects, and observers!"
+  },
+  {
+    "name": "Feed",
+    "package": "laminas/laminas-feed",
+    "url": "https://docs.laminas.dev/laminas-feed/",
+    "group": "components",
+    "description": "Consume and generate Atom and RSS feeds, and interact with Pubsubhubbub."
+  },
+  {
+    "name": "File",
+    "package": "laminas/laminas-file",
+    "url": "https://docs.laminas.dev/laminas-file/",
+    "group": "components",
+    "description": "Locate PHP classfiles."
+  },
+  {
+    "name": "Filter",
+    "package": "laminas/laminas-filter",
+    "url": "https://docs.laminas.dev/laminas-filter/",
+    "group": "components",
+    "description": "Programmatically filter and normalize data and files."
+  },
+  {
+    "name": "Form",
+    "package": "laminas/laminas-form",
+    "url": "https://docs.laminas.dev/laminas-form/",
+    "group": "components",
+    "description": "Validate and display simple and complex forms, casting forms to business objects and vice versa."
+  },
+  {
+    "name": "HTTP",
+    "package": "laminas/laminas-http",
+    "url": "https://docs.laminas.dev/laminas-http/",
+    "group": "components",
+    "description": "HTTP message and header abstractions, and HTTP client implementation.  (Not a PSR-7 implementation.)"
+  },
+  {
+    "name": "HTTP Request Handler Runner",
+    "package": "laminas/laminas-httphandlerrunner",
+    "url": "https://docs.laminas.dev/laminas-httphandlerrunner/",
+    "group": "middleware",
+    "description": "Execute PSR-15 RequestHandlerInterface instances and emit responses they generate."
+  },
+  {
+    "name": "Hydrator",
+    "package": "laminas/laminas-hydrator",
+    "url": "https://docs.laminas.dev/laminas-hydrator/",
+    "group": "components",
+    "description": "Serialize objects to arrays, and vice versa."
+  },
+  {
+    "name": "InputFilter",
+    "package": "laminas/laminas-inputfilter",
+    "url": "https://docs.laminas.dev/laminas-inputfilter/",
+    "group": "components",
+    "description": "Normalize and validate input sets from the web, APIs, the CLI, and more, including files."
+  },
+  {
+    "name": "Internationalization",
+    "package": "laminas/laminas-i18n",
+    "url": "https://docs.laminas.dev/laminas-i18n/",
+    "group": "components",
+    "description": "Provide translations for your application, and filter and validate internationalized values."
+  },
+  {
+    "name": "JSON",
+    "package": "laminas/laminas-json",
+    "url": "https://docs.laminas.dev/laminas-json/",
+    "group": "components",
+    "description": "De/Serialize JSON in PHP, including JavaScript expressions."
+  },
+  {
+    "name": "JSON-RPC Server",
+    "package": "laminas/laminas-json-server",
+    "url": "https://docs.laminas.dev/laminas-json-server/",
+    "group": "components",
+    "description": "JSON-RPC implementation for PHP."
+  },
+  {
+    "name": "LDAP",
+    "package": "laminas/laminas-ldap",
+    "url": "https://docs.laminas.dev/laminas-ldap/",
+    "group": "components",
+    "description": "Perform LDAP operations, including binding, searching and modifying entries in an LDAP directory."
+  },
+  {
+    "name": "Loader",
+    "package": "laminas/laminas-loader",
+    "url": "https://docs.laminas.dev/laminas-loader/",
+    "group": "components",
+    "description": "Autoloading and plugin loading strategies."
+  },
+  {
+    "name": "Log",
+    "package": "laminas/laminas-log",
+    "url": "https://docs.laminas.dev/laminas-log/",
+    "group": "components",
+    "description": "Robust, composite logger with filtering, formatting, and PSR-3 support."
+  },
+  {
+    "name": "Mail",
+    "package": "laminas/laminas-mail",
+    "url": "https://docs.laminas.dev/laminas-mail/",
+    "group": "components",
+    "description": "Parse, create, store, and send email messages, using a variety of storage and transport protocols."
+  },
+  {
+    "name": "Math",
+    "package": "laminas/laminas-math",
+    "url": "https://docs.laminas.dev/laminas-math/",
+    "group": "components",
+    "description": "Create cryptographically secure pseudo-random numbers, and manage big integers."
+  },
+  {
+    "name": "Memory",
+    "package": "laminas/laminas-memory",
+    "url": "https://docs.laminas.dev/laminas-memory/",
+    "group": "components",
+    "description": "Manage data in an environment with limited memory."
+  },
+  {
+    "name": "MIME",
+    "package": "laminas/laminas-mime",
+    "url": "https://docs.laminas.dev/laminas-mime/",
+    "group": "components",
+    "description": "Create and parse MIME messages and parts."
+  },
+  {
+    "name": "Module Manager",
+    "package": "laminas/laminas-modulemanager",
+    "url": "https://docs.laminas.dev/laminas-modulemanager/",
+    "group": "mvc",
+    "description": "Modular application system for zend-mvc applications."
+  },
+  {
+    "name": "MVC",
+    "package": "laminas/laminas-mvc",
+    "url": "https://docs.laminas.dev/laminas-mvc/",
+    "group": "mvc",
+    "description": "Zend Framework's event-driven MVC layer, including MVC Applications, Controllers, and Plugins."
+  },
+  {
+    "name": "MVC-Console integration",
+    "package": "laminas/laminas-mvc-console",
+    "url": "https://docs.laminas.dev/laminas-mvc-console/",
+    "group": "mvc",
+    "description": "[DEPRECATED] Integration between zend-mvc and zend-console."
+  },
+  {
+    "name": "MVC-i18n integration",
+    "package": "laminas/laminas-mvc-i18n",
+    "url": "https://docs.laminas.dev/laminas-mvc-i18n/",
+    "group": "mvc",
+    "description": "Integration between zend-mvc and zend-i18n."
+  },
+  {
+    "name": "MVC fileprg() plugin",
+    "package": "laminas/laminas-mvc-plugin-fileprg",
+    "url": "https://docs.laminas.dev/laminas-mvc-plugin-fileprg/",
+    "group": "mvc",
+    "description": "Post/Redirect/Get plugin with file upload handling for zend-mvc controllers."
+  },
+  {
+    "name": "MVC flashmessenger() plugin",
+    "package": "laminas/laminas-mvc-plugin-flashmessenger",
+    "url": "https://docs.laminas.dev/laminas-mvc-plugin-flashmessenger/",
+    "group": "mvc",
+    "description": "Plugin for creating and exposing flash messages via zend-mvc controllers."
+  },
+  {
+    "name": "MVC identity() plugin",
+    "package": "laminas/laminas-mvc-plugin-identity",
+    "url": "https://docs.laminas.dev/laminas-mvc-plugin-identity/",
+    "group": "mvc",
+    "description": "Plugin for retrieving the current authenticated identity within zend-mvc controllers."
+  },
+  {
+    "name": "MVC prg() plugin",
+    "package": "laminas/laminas-mvc-plugin-prg",
+    "url": "https://docs.laminas.dev/laminas-mvc-plugin-prg/",
+    "group": "mvc",
+    "description": "Post/Redirect/Get plugin for zend-mvc controllers."
+  },
+  {
+    "name": "Navigation",
+    "package": "laminas/laminas-navigation",
+    "url": "https://docs.laminas.dev/laminas-navigation/",
+    "group": "components",
+    "description": "Manage trees of pointers to web pages in order to build navigation systems."
+  },
+  {
+    "name": "Paginator",
+    "package": "laminas/laminas-paginator",
+    "url": "https://docs.laminas.dev/laminas-paginator/",
+    "group": "components",
+    "description": "Paginate collections of data from arbitrary sources."
+  },
+  {
+    "name": "ACL",
+    "package": "laminas/laminas-permissions-acl",
+    "url": "https://docs.laminas.dev/laminas-permissions-acl/",
+    "group": "components",
+    "description": "Create, manage, and query access control lists."
+  },
+  {
+    "name": "RBAC",
+    "package": "laminas/laminas-permissions-rbac",
+    "url": "https://docs.laminas.dev/laminas-permissions-rbac/",
+    "group": "components",
+    "description": "Provide and query Role-Based Access Controls for your application."
+  },
+  {
+    "name": "ProgressBar",
+    "package": "laminas/laminas-progressbar",
+    "url": "https://docs.laminas.dev/laminas-progressbar/",
+    "group": "components",
+    "description": "Create and update progress bars in different environments."
+  },
+  {
+    "name": "PSR-7 Bridge",
+    "package": "laminas/laminas-psr7bridge",
+    "url": "https://docs.laminas.dev/laminas-psr7bridge/",
+    "group": "mvc",
+    "description": "PSR-7 &lt;-&gt; zend-http message conversions."
+  },
+  {
+    "name": "Router",
+    "package": "laminas/laminas-router",
+    "url": "https://docs.laminas.dev/laminas-router/",
+    "group": "components",
+    "description": "Flexible routing system for HTTP and console applications."
+  },
+  {
+    "name": "Serializer",
+    "package": "laminas/laminas-serializer",
+    "url": "https://docs.laminas.dev/laminas-serializer/",
+    "group": "components",
+    "description": "Serialize and deserialize PHP structures to a variety of representations."
+  },
+  {
+    "name": "Server",
+    "package": "laminas/laminas-server",
+    "url": "https://docs.laminas.dev/laminas-server/",
+    "group": "components",
+    "description": "Create Reflection-based RPC servers."
+  },
+  {
+    "name": "ServiceManager",
+    "package": "laminas/laminas-servicemanager",
+    "url": "https://docs.laminas.dev/laminas-servicemanager/",
+    "group": "components",
+    "description": "Factory-Driven Dependency Injection Container"
+  },
+  {
+    "name": "ServiceManager-Di integration",
+    "package": "laminas/laminas-servicemanager-di",
+    "url": "https://docs.laminas.dev/laminas-servicemanager-di/",
+    "group": "components",
+    "description": "[DEPRECATED] zend-di integration for zend-servicemanager"
+  },
+  {
+    "name": "Session",
+    "package": "laminas/laminas-session",
+    "url": "https://docs.laminas.dev/laminas-session/",
+    "group": "components",
+    "description": "Object-oriented interface to PHP sessions and storage."
+  },
+  {
+    "name": "SOAP",
+    "package": "laminas/laminas-soap",
+    "url": "https://docs.laminas.dev/laminas-soap/",
+    "group": "components",
+    "description": "Create, serve, and access SOAP applications, and parse and generate WSDL."
+  },
+  {
+    "name": "Stdlib",
+    "package": "laminas/laminas-stdlib",
+    "url": "https://docs.laminas.dev/laminas-stdlib/",
+    "group": "components",
+    "description": "SPL extensions, array utilities, error handlers, and more."
+  },
+  {
+    "name": "Stratigility",
+    "package": "laminas/laminas-stratigility",
+    "url": "https://docs.laminas.dev/laminas-stratigility/",
+    "group": "middleware",
+    "description": "PSR-7 middleware foundation for building and dispatching middleware pipelines."
+  },
+  {
+    "name": "Tag",
+    "package": "laminas/laminas-tag",
+    "url": "https://docs.laminas.dev/laminas-tag/",
+    "group": "components",
+    "description": "Manipulate and weight taggable items, and create tag clouds."
+  },
+  {
+    "name": "MVC Testing",
+    "package": "laminas/laminas-test",
+    "url": "https://docs.laminas.dev/laminas-test/",
+    "group": "mvc",
+    "description": "Tools to facilitate unit testing of zend-mvc applications."
+  },
+  {
+    "name": "Text",
+    "package": "laminas/laminas-text",
+    "url": "https://docs.laminas.dev/laminas-text/",
+    "group": "components",
+    "description": "Create FIGlets and text-based tables."
+  },
+  {
+    "name": "URI",
+    "package": "laminas/laminas-uri",
+    "url": "https://docs.laminas.dev/laminas-uri/",
+    "group": "components",
+    "description": "Object oriented interface to URIs, with facilities for validation."
+  },
+  {
+    "name": "Validator",
+    "package": "laminas/laminas-validator",
+    "url": "https://docs.laminas.dev/laminas-validator/",
+    "group": "components",
+    "description": "Validation classes for a wide range of domains, and the ability to chain validators to create complex validation criteria."
+  },
+  {
+    "name": "View",
+    "package": "laminas/laminas-view",
+    "url": "https://docs.laminas.dev/laminas-view/",
+    "group": "components",
+    "description": "Flexible view layer supporting and providing multiple view layers, helpers, and more."
+  },
+  {
+    "name": "XML-RPC",
+    "package": "laminas/laminas-xmlrpc",
+    "url": "https://docs.laminas.dev/laminas-xmlrpc/",
+    "group": "components",
+    "description": "Fully-featured XML-RPC server and client implementations."
+  },
+  {
+    "name": "XML2JSON",
+    "package": "laminas/laminas-xml2json",
+    "url": "https://docs.laminas.dev/laminas-xml2json/",
+    "group": "components",
+    "description": "Convert XML documents to JSON."
+  },
+  {
+    "name": "Diagnostics",
+    "package": "laminas/laminas-diagnostics",
+    "url": "https://docs.laminas.dev/laminas-diagnostics/",
+    "group": "components",
+    "description": "Universal set of diagnostic tests for PHP applications."
+  }
+]

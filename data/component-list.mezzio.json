@@ -1,0 +1,114 @@
+[
+  {
+    "name": "Mezzio",
+    "package": "mezzio/mezzio",
+    "url": "https://docs.mezzio.dev/mezzio/",
+    "group": "middleware",
+    "description": "PSR-7 middleware in minutes."
+  },
+  {
+    "name": "CSRF",
+    "package": "mezzio/mezzio-csrf",
+    "url": "https://docs.mezzio.dev/mezzio-csrf/",
+    "group": "middleware",
+    "description": "CSRF token generation and validation for PSR-7 and Mezzio applications."
+  },
+  {
+    "name": "Authentication for Mezzio and PSR-7",
+    "package": "mezzio/mezzio-authentication",
+    "url": "https://docs.mezzio.dev/mezzio-authentication/",
+    "group": "middleware",
+    "description": "Authentication middleware for Mezzio and PSR-7 applications."
+  },
+  {
+    "name": "HTTP Basic Authentication for Mezzio and PSR-7",
+    "package": "mezzio/mezzio-authentication-basic",
+    "url": "https://docs.mezzio.dev/mezzio-authentication-basic/",
+    "group": "middleware",
+    "description": "HTTP Basic Authentication adapter for mezzio-authentication."
+  },
+  {
+    "name": "Username/password authentication for mezzio-authentication",
+    "package": "mezzio/mezzio-authentication-session",
+    "url": "https://docs.mezzio.dev/mezzio-authentication-session/",
+    "group": "middleware",
+    "description": "Username/password, session-backed authentication adapter for mezzio-authentication."
+  },
+  {
+    "name": "laminas-authentication integration for Mezzio",
+    "package": "mezzio/mezzio-authentication-laminasauthentication",
+    "url": "https://docs.mezzio.dev/mezzio-authentication-laminasauthentication/",
+    "group": "middleware",
+    "description": "laminas-authentication adapter for mezzio-authentication."
+  },
+  {
+    "name": "Authorization for Mezzio and PSR-7",
+    "package": "mezzio/mezzio-authorization",
+    "url": "https://docs.mezzio.dev/mezzio-authorization/",
+    "group": "middleware",
+    "description": "Authorization middleware for Mezzio and PSR-7 applications."
+  },
+  {
+    "name": "laminas-permissions-acl integration for Mezzio",
+    "package": "mezzio/mezzio-authorization-acl",
+    "url": "https://docs.mezzio.dev/mezzio-authorization-acl/",
+    "group": "middleware",
+    "description": "ACL permission adapter for mezzio-authorization."
+  },
+  {
+    "name": "laminas-permissions-rbac integration for Mezzio",
+    "package": "mezzio/mezzio-authorization-rbac",
+    "url": "https://docs.mezzio.dev/mezzio-authorization-rbac/",
+    "group": "middleware",
+    "description": "RBAC permission adapter for mezzio-authorization."
+  },
+  {
+    "name": "Swoole support for Mezzio",
+    "package": "mezzio/mezzio-swoole",
+    "url": "https://docs.mezzio.dev/mezzio-swoole/",
+    "group": "middleware",
+    "description": "Support of Swoole into an Mezzio application."
+  },
+  {
+    "name": "Flash",
+    "package": "mezzio/mezzio-flash",
+    "url": "https://docs.mezzio.dev/mezzio-flash/",
+    "group": "middleware",
+    "description": "Flash messages for PSR-7 and Mezzio applications."
+  },
+  {
+    "name": "HAL for PSR-7",
+    "package": "mezzio/mezzio-hal",
+    "url": "https://docs.mezzio.dev/mezzio-hal/",
+    "group": "middleware",
+    "description": "Hypertext Application Language (HAL) for PSR-7."
+  },
+  {
+    "name": "PSR-7 Sessions",
+    "package": "mezzio/mezzio-session",
+    "url": "https://docs.mezzio.dev/mezzio-session/",
+    "group": "middleware",
+    "description": "Session container and middleware PSR-7 and Mezzio applications."
+  },
+  {
+    "name": "PSR-7 Sessions via PSR-6 Cache Item Pools",
+    "package": "mezzio/mezzio-session-cache",
+    "url": "https://docs.mezzio.dev/mezzio-session-cache/",
+    "group": "middleware",
+    "description": "PSR-6 session persistence adapter for mezzio-session."
+  },
+  {
+    "name": "PSR-7 Sessions via ext-session",
+    "package": "mezzio/mezzio-session-ext",
+    "url": "https://docs.mezzio.dev/mezzio-session-ext/",
+    "group": "middleware",
+    "description": "PHP ext-session persistence for PSR-7 sessions."
+  },
+  {
+    "name": "Problem Details",
+    "package": "mezzio/mezzio-problem-details",
+    "url": "https://docs.mezzio.dev/mezzio-problem-details/",
+    "group": "middleware",
+    "description": "PSR-7 Problem Details for HTTP API responses and middleware."
+  }
+]
