@@ -14,13 +14,6 @@ $projectColors : (
 
 // Bootstrap variables
 
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1600px,
-);
-
 // Colors
 $brand-primary: rgb(1, 55, 85);
 $link-color: $brand-primary;
@@ -33,6 +26,8 @@ $theme-colors: (
   "api-tools":   #E5007D,
   "mezzio":      #009655,
 );
+
+$body-bg: #f9fafb;
 
 // Font
 $font-family-sans-serif: 'Open Sans', sans-serif;
