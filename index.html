@@ -1,1160 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Laminas Documentation">  
+    <meta name="description" content="Overview of the documentation for Laminas subprojects.">
     <link rel="shortcut icon" href="/img/trademark-laminas-foundation-rgb.svg">
 
     <title>Laminas Documentation</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body id="page-top" class="laminas">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="logo-link navbar-brand offset-md-2" href="https://getlaminas.org/" data-tooltip data-placement="bottom" title="Go to the Laminas homepage">
-                <img src="/img/laminas-foundation-white.svg" height="28" alt="Lamnias">
-            </a>
-            <a class="navbar-title" href="https://docs.laminas.dev/" data-tooltip data-placement="bottom" title="Go to the Laminas Documentation">
-                Documentation
-            </a>
+<body id="page-top" class="overview h-100 d-flex flex-column">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="logo-link navbar-brand" href="https://getlaminas.org/" data-tooltip data-placement="bottom" title="Go to the Laminas homepage">
+            <img src="https://docs.laminas.dev/img/laminas-foundation-white.svg" height="28" alt="Lamnias">
+        </a>
+        <a class="navbar-title" href="https://docs.laminas.dev/" data-tooltip
+           data-placement="bottom" title="Go to the Laminas Documentation">
+            Documentation
+        </a>
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a href="https://getlaminas.org/about" class="nav-link">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://getlaminas.org/blog" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://docs.laminas.dev" class="nav-link">All Docs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://getlaminas.org/participate" class="nav-link">Community</a>
-                    </li>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                            All Docs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="https://docs.laminas.dev/components">Components</a>
+                            <a class="dropdown-item" href="https://docs.mezzio.dev/">Mezzio</a>
+                            <a class="dropdown-item" href="https://api-tools.getlaminas.org/docs">API Tools</a>
+                            <a class="dropdown-item" href="https://docs.laminas.dev/mvc">MVC</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="https://getlaminas.org/participate" class="nav-link">Community</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header">
+    <div class="container">
+        <h1 class="header__title">
+            Overview
+        </h1>
+    </div>
+</header>
+
+<div class="container flex-grow-1">
+    <div class="row">
+        <main class="col-sm-12 content">
+            <h3 class="display-4">Documentation of Laminas</h3>
+            <hr>
+
+            <div class="row row-cols-1 row-cols-md-4">
+                <div class="col mb-2">
+                    <a href="https://docs.mezzio.dev/" class="mezzio">
+                        <div class="card h-100 text-center">
+                            <div class="card-header">
+                                <img src="img/laminas-mezzio-rgb.svg">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Mezzio</h5>
+                                <p class="card-text">PSR-15 Middleware in Minutes</p>
+                            </div>
+                            <div class="card-footer text-muted">before Expressive</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col mb-2">
+                    <a href="https://docs.laminas.dev/components" class="components">
+                        <div class="card h-100 text-center">
+                            <div class="card-header">
+                                <img src="img/laminas-components-rgb.svg">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Components</h5>
+                                <p class="card-text">Components for Enterprise Applications</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col mb-2">
+                    <a href="https://docs.laminas.dev/mvc" class="mvc">
+                        <div class="card h-100 text-center">
+                            <div class="card-header">
+                                <img src="img/laminas-mvc-rgb.svg">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">MVC</h5>
+                                <p class="card-text">MVC for Enterprise Applications</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col mb-2">
+                    <a href="https://api-tools.getlaminas.org/docs" class="api-tools">
+                        <div class="card h-100 text-center">
+                            <div class="card-header">
+                                <img src="img/laminas-api-tools-rgb.svg">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">API Tools</h5>
+                                <p class="card-text">Build RESTful APIs in Minutes</p>
+                            </div>
+                            <div class="card-footer text-muted">before Apigility</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Laminas</h5>
+                <ul>
+                    <li>Laminas Project <a href="https://getlaminas.org/">The new foundation for the community-supported, open source continuation of Zend Framework</a></li>
+                    <li>Laminas Components and MVC <a href="https://docs.laminas.dev/">Components and MVC for enterprise applications</a></li>
+                    <li>Mezzio <a href="https://getmezzio.org/">PSR-15 middleware in minutes</a></li>
+                    <li>Laminas API Tools <a href="https://api-tools.getlaminas.org/">Build RESTful APIs in minutes</a></li>
                 </ul>
             </div>
         </div>
-    </nav>
 
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 offset-md-2">
-                    <h1 class="header__title">
-                        Laminas Documentation
-                    </h1>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
         <div class="row">
-            <div class="col-md-2 col-sm-12">
-                &nbsp;
-            </div>
-
-            <div class="col-md-7 col-sm-12 content" role="main" data-spy="scroll" data-target=".toc">
-<!-- START COMPONENT LISTS -->
-<h3 class="text-laminas">Components and MVC</h3>
-<div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/tutorials
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/tutorials">Tutorials</a></h5>
-                <p class="card-text">Learn how to create zend-mvc applications, get in-depth guides into components, and discover how to migrate your applications to version 3!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-authentication
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-authentication">Authentication</a></h5>
-                <p class="card-text">Authenticate users via a variety of adapters, and provide the authenticated identity to your application.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-barcode
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-barcode">Barcode</a></h5>
-                <p class="card-text">Programmatically create and render barcodes as images or in PDFs.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-cache
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-cache/">Cache</a></h5>
-                <p class="card-text">Caching implementation with a variety of storage options, as well as codified caching strategies for callbacks, classes, and output.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-captcha
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-captcha/">Captcha</a></h5>
-                <p class="card-text">Generate and validate CAPTCHAs using Figlets, images, ReCaptcha, and more.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-code
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-code/">Code</a></h5>
-                <p class="card-text">Extensions to the PHP Reflection API, static code scanning, and code generation.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-component-installer
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-component-installer/">Component Installer</a></h5>
-                <p class="card-text">Composer plugin for injecting modules and configuration providers into application configuration.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-config
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-config/">Config</a></h5>
-                <p class="card-text">Read and write configuration files.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-config-aggregator
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-config-aggregator/">ConfigAggregator</a></h5>
-                <p class="card-text">Lightweight library for collecting and merging configuration from different sources.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-config-aggregator-modulemanager
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-config-aggregator-modulemanager/">ConfigAggregator ModuleManager Plugin</a></h5>
-                <p class="card-text">Consume zend-mvc modules as configuration providers within zend-config-aggregator.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-config-aggregator-parameters
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-config-aggregator-parameters/">ConfigAggregator Templated Parameters PostProcessor</a></h5>
-                <p class="card-text">PostProcessor extension for laminas/laminas-config-aggregator to allow usage of templated parameters within your configuration.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-console
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-console/">Console</a></h5>
-                <p class="card-text">[DEPRECATED] Build console applications using getopt syntax or routing, complete with prompts</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-crypt
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-crypt/">Crypt</a></h5>
-                <p class="card-text">Strong cryptography tools and password hashing.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-db
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-db/">DB</a></h5>
-                <p class="card-text">Database abstraction layer, SQL abstraction, result set abstraction, and RowDataGateway and TableDataGateway implementations.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-di
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-di/">DI</a></h5>
-                <p class="card-text">Automated dependency injection and instance manager.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-diactoros
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-diactoros/">Diactoros</a></h5>
-                <p class="card-text">PSR-7 HTTP message implementations.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-dom
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-dom/">DOM</a></h5>
-                <p class="card-text">Query HTML and XML documents using XPath or CSS selectors.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-escaper
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-escaper/">Escaper</a></h5>
-                <p class="card-text">Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-eventmanager
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-eventmanager/">EventManager</a></h5>
-                <p class="card-text">Implement events, signal slots, aspects, and observers!</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-feed
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-feed/">Feed</a></h5>
-                <p class="card-text">Consume and generate Atom and RSS feeds, and interact with Pubsubhubbub.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-file
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-file/">File</a></h5>
-                <p class="card-text">Locate PHP classfiles.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-filter
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-filter/">Filter</a></h5>
-                <p class="card-text">Programmatically filter and normalize data and files.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-form
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-form/">Form</a></h5>
-                <p class="card-text">Validate and display simple and complex forms, casting forms to business objects and vice versa.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-http
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-http/">HTTP</a></h5>
-                <p class="card-text">HTTP message and header abstractions, and HTTP client implementation.  (Not a PSR-7 implementation.)</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-httphandlerrunner
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-httphandlerrunner/">HTTP Request Handler Runner</a></h5>
-                <p class="card-text">Execute PSR-15 RequestHandlerInterface instances and emit responses they generate.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-hydrator
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-hydrator/">Hydrator</a></h5>
-                <p class="card-text">Serialize objects to arrays, and vice versa.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-inputfilter
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-inputfilter/">InputFilter</a></h5>
-                <p class="card-text">Normalize and validate input sets from the web, APIs, the CLI, and more, including files.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-i18n
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-i18n/">Internationalization</a></h5>
-                <p class="card-text">Provide translations for your application, and filter and validate internationalized values.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-json
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-json/">JSON</a></h5>
-                <p class="card-text">De/Serialize JSON in PHP, including JavaScript expressions.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-json-server
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-json-server/">JSON-RPC Server</a></h5>
-                <p class="card-text">JSON-RPC implementation for PHP.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-ldap
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-ldap/">LDAP</a></h5>
-                <p class="card-text">Perform LDAP operations, including binding, searching and modifying entries in an LDAP directory.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-loader
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-loader/">Loader</a></h5>
-                <p class="card-text">Autoloading and plugin loading strategies.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-log
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-log/">Log</a></h5>
-                <p class="card-text">Robust, composite logger with filtering, formatting, and PSR-3 support.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mail
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mail/">Mail</a></h5>
-                <p class="card-text">Parse, create, store, and send email messages, using a variety of storage and transport protocols.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-math
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-math/">Math</a></h5>
-                <p class="card-text">Create cryptographically secure pseudo-random numbers, and manage big integers.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-memory
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-memory/">Memory</a></h5>
-                <p class="card-text">Manage data in an environment with limited memory.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mime
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mime/">MIME</a></h5>
-                <p class="card-text">Create and parse MIME messages and parts.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-modulemanager
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-modulemanager/">Module Manager</a></h5>
-                <p class="card-text">Modular application system for zend-mvc applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc/">MVC</a></h5>
-                <p class="card-text">Zend Framework's event-driven MVC layer, including MVC Applications, Controllers, and Plugins.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc-console
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc-console/">MVC-Console integration</a></h5>
-                <p class="card-text">[DEPRECATED] Integration between zend-mvc and zend-console.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc-i18n
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc-i18n/">MVC-i18n integration</a></h5>
-                <p class="card-text">Integration between zend-mvc and zend-i18n.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc-plugin-fileprg
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc-plugin-fileprg/">MVC fileprg() plugin</a></h5>
-                <p class="card-text">Post/Redirect/Get plugin with file upload handling for zend-mvc controllers.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc-plugin-flashmessenger
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc-plugin-flashmessenger/">MVC flashmessenger() plugin</a></h5>
-                <p class="card-text">Plugin for creating and exposing flash messages via zend-mvc controllers.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc-plugin-identity
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc-plugin-identity/">MVC identity() plugin</a></h5>
-                <p class="card-text">Plugin for retrieving the current authenticated identity within zend-mvc controllers.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-mvc-plugin-prg
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-mvc-plugin-prg/">MVC prg() plugin</a></h5>
-                <p class="card-text">Post/Redirect/Get plugin for zend-mvc controllers.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-navigation
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-navigation/">Navigation</a></h5>
-                <p class="card-text">Manage trees of pointers to web pages in order to build navigation systems.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-paginator
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-paginator/">Paginator</a></h5>
-                <p class="card-text">Paginate collections of data from arbitrary sources.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-permissions-acl
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-permissions-acl/">ACL</a></h5>
-                <p class="card-text">Create, manage, and query access control lists.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-permissions-rbac
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-permissions-rbac/">RBAC</a></h5>
-                <p class="card-text">Provide and query Role-Based Access Controls for your application.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-progressbar
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-progressbar/">ProgressBar</a></h5>
-                <p class="card-text">Create and update progress bars in different environments.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-psr7bridge
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-psr7bridge/">PSR-7 Bridge</a></h5>
-                <p class="card-text">PSR-7 &lt;-&gt; zend-http message conversions.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-router
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-router/">Router</a></h5>
-                <p class="card-text">Flexible routing system for HTTP and console applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-serializer
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-serializer/">Serializer</a></h5>
-                <p class="card-text">Serialize and deserialize PHP structures to a variety of representations.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-server
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-server/">Server</a></h5>
-                <p class="card-text">Create Reflection-based RPC servers.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-servicemanager
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-servicemanager/">ServiceManager</a></h5>
-                <p class="card-text">Factory-Driven Dependency Injection Container</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-servicemanager-di
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-servicemanager-di/">ServiceManager-Di integration</a></h5>
-                <p class="card-text">[DEPRECATED] zend-di integration for zend-servicemanager</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-session
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-session/">Session</a></h5>
-                <p class="card-text">Object-oriented interface to PHP sessions and storage.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-soap
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-soap/">SOAP</a></h5>
-                <p class="card-text">Create, serve, and access SOAP applications, and parse and generate WSDL.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-stdlib
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-stdlib/">Stdlib</a></h5>
-                <p class="card-text">SPL extensions, array utilities, error handlers, and more.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-stratigility
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-stratigility/">Stratigility</a></h5>
-                <p class="card-text">PSR-7 middleware foundation for building and dispatching middleware pipelines.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-tag
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-tag/">Tag</a></h5>
-                <p class="card-text">Manipulate and weight taggable items, and create tag clouds.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-test
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-test/">MVC Testing</a></h5>
-                <p class="card-text">Tools to facilitate unit testing of zend-mvc applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-text
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-text/">Text</a></h5>
-                <p class="card-text">Create FIGlets and text-based tables.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-uri
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-uri/">URI</a></h5>
-                <p class="card-text">Object oriented interface to URIs, with facilities for validation.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-validator
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-validator/">Validator</a></h5>
-                <p class="card-text">Validation classes for a wide range of domains, and the ability to chain validators to create complex validation criteria.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-view
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-view/">View</a></h5>
-                <p class="card-text">Flexible view layer supporting and providing multiple view layers, helpers, and more.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-xmlrpc
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-xmlrpc/">XML-RPC</a></h5>
-                <p class="card-text">Fully-featured XML-RPC server and client implementations.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-xml2json
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-xml2json/">XML2JSON</a></h5>
-                <p class="card-text">Convert XML documents to JSON.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-laminas text-white">
-                laminas/laminas-diagnostics
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.laminas.dev/laminas-diagnostics/">Diagnostics</a></h5>
-                <p class="card-text">Universal set of diagnostic tests for PHP applications.</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<h3 class="text-mezzio">Mezzio: PSR-15 Middleware in Minutes</h3>
-<div class="row row-cols-1 row-cols-md-3">
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio/">Mezzio</a></h5>
-                <p class="card-text">PSR-7 middleware in minutes.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-csrf
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-csrf/">CSRF</a></h5>
-                <p class="card-text">CSRF token generation and validation for PSR-7 and Mezzio applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authentication
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authentication/">Authentication for Mezzio and PSR-7</a></h5>
-                <p class="card-text">Authentication middleware for Mezzio and PSR-7 applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authentication-basic
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authentication-basic/">HTTP Basic Authentication for Mezzio and PSR-7</a></h5>
-                <p class="card-text">HTTP Basic Authentication adapter for mezzio-authentication.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authentication-session
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authentication-session/">Username/password authentication for mezzio-authentication</a></h5>
-                <p class="card-text">Username/password, session-backed authentication adapter for mezzio-authentication.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authentication-laminasauthentication
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authentication-laminasauthentication/">laminas-authentication integration for Mezzio</a></h5>
-                <p class="card-text">laminas-authentication adapter for mezzio-authentication.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authorization
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authorization/">Authorization for Mezzio and PSR-7</a></h5>
-                <p class="card-text">Authorization middleware for Mezzio and PSR-7 applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authorization-acl
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authorization-acl/">laminas-permissions-acl integration for Mezzio</a></h5>
-                <p class="card-text">ACL permission adapter for mezzio-authorization.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-authorization-rbac
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-authorization-rbac/">laminas-permissions-rbac integration for Mezzio</a></h5>
-                <p class="card-text">RBAC permission adapter for mezzio-authorization.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-swoole
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-swoole/">Swoole support for Mezzio</a></h5>
-                <p class="card-text">Support of Swoole into an Mezzio application.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-flash
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-flash/">Flash</a></h5>
-                <p class="card-text">Flash messages for PSR-7 and Mezzio applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-hal
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-hal/">HAL for PSR-7</a></h5>
-                <p class="card-text">Hypertext Application Language (HAL) for PSR-7.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-session
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-session/">PSR-7 Sessions</a></h5>
-                <p class="card-text">Session container and middleware PSR-7 and Mezzio applications.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-session-cache
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-session-cache/">PSR-7 Sessions via PSR-6 Cache Item Pools</a></h5>
-                <p class="card-text">PSR-6 session persistence adapter for mezzio-session.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-session-ext
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-session-ext/">PSR-7 Sessions via ext-session</a></h5>
-                <p class="card-text">PHP ext-session persistence for PSR-7 sessions.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="col mb-4">
-        <div class="card h-100">
-            <div class="card-header bg-mezzio text-white">
-                mezzio/mezzio-problem-details
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"><a href="https://docs.mezzio.dev/mezzio-problem-details/">Problem Details</a></h5>
-                <p class="card-text">PSR-7 Problem Details for HTTP API responses and middleware.</p>
-            </div>
-        </div>
-    </div>
+            <div class="col-md-6">
+                <h4 class="footer__headline">Support</h4>
+                <ul class="support__list">
+                    <li class="support__list-item">
+                        <a href="https://discourse.laminas.dev" class="support__link" title="Forum"><i class="fa fa-comments"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://laminas.dev/chat" class="support__link" title="Chat"><i class="fa fa-slack"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://github.com/laminas" class="support__link" title="Github"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://twitter.com/getlaminas" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://getlaminas.org/blog/feed-rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://getlaminas.org/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="footer__headline">Copyright</h4>
+                <p>
+                    &copy; 2019 by <a href="https://getlaminas.org/">The Laminas Project</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-</div>
-
-<!-- END COMPONENT LISTS -->
-            </div>
-
-            <div class="col-md-3 col-sm-12 sidebar">
-                &nbsp;
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-7 offset-md-2">
-                    <h5>Laminas</h5>
-                    <ul>
-                        <li>Laminas Project <a href="https://getlaminas.org/">Components and MVC for Enterprise Applications</a></li>
-                        <li>Mezzio <a href="https://getmezzio.org/">PSR-15 Middleware in Minutes</a></li>
-                        <li>Laminas API Tools: <a href="https://api-tools.laminas.dev/">Build RESTful APIs in minutes</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 offset-md-2">
-                    <h4 class="footer__headline">Support</h4>
-                    <ul class="support__list">
-                        <li class="support__list-item">
-                            <a href="https://discourse.laminas.dev" class="support__link" title="Forum"><i class="fa fa-comments"></i></a>
-                        </li>
-                        <li class="support__list-item">
-                            <a href="https://laminas.dev/chat" class="support__link" title="Chat"><i class="fa fa-slack"></i></a>
-                        </li>
-                        <li class="support__list-item">
-                            <a href="https://github.com/laminas" class="support__link" title="Github"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li class="support__list-item">
-                            <a href="https://twitter.com/getlaminas" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li class="support__list-item">
-                            <a href="https://getlaminas.org/blog/feed-rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
-                        </li>
-                        <li class="support__list-item">
-                            <a href="https://getlaminas.org/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4">
-                    <h4 class="footer__headline">Copyright</h4>
-                    <p>
-                        &copy; 2019 by <a href="https://getlaminas.org/">The Laminas Project</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    
     <script>
         let base_url = '/',
             project  = "laminas",
