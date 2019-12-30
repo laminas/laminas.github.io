@@ -62,16 +62,10 @@ $navbar-default-brand-hover-color: $header-footer-font-color;
 $navbar-margin-bottom: 0;
 
 // Dropdown
-$dropdown-bg: $header-footer-bg-color;
-$dropdown-border: transparent;
-$dropdown-divider-bg: darken($header-footer-font-color, 50%);
+$dropdown-bg: $brand-primary;
 
 $dropdown-link-color: $header-footer-font-color;
 $dropdown-link-hover-color: $link-color;
-$dropdown-link-hover-bg: $header-footer-bg-color;
-
-$dropdown-link-active-color: $header-footer-font-color;
-$dropdown-link-active-bg: $link-color;
 
 // Breadcrumbs
 $breadcrumb-margin-bottom: 1.2rem;
