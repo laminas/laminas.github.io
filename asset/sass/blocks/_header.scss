@@ -9,6 +9,10 @@
         margin: 0;
         color: white;
         word-break: normal;
+
+        .overview & {
+            color: $body-color;
+        }
     }
 
     &__subtitle {

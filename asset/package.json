@@ -1,5 +1,5 @@
 {
-    "name": "laminas/laminas.github.io",
+    "name": "laminas.github.io",
     "version": "1.0.0",
     "description": "Laminas Documentation Theme",
     "main": "gulpfile.js",
@@ -17,8 +17,8 @@
     },
     "homepage": "https://getlaminas.org/",
     "devDependencies": {
-        "@babel/core": "^7.7.5",
-        "@babel/preset-env": "^7.7.6",
+        "@babel/core": "^7.7.7",
+        "@babel/preset-env": "^7.7.7",
         "anchor-js": "^4.2.2",
         "bootstrap": "^4.4.1",
         "choices.js": "^9.0.1",

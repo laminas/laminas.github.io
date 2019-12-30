@@ -3,43 +3,58 @@
 declare(strict_types=1);
 
 const PROJECT_INFO = [
-    'laminas' => [
-        'title' => 'Components and MVC',
-        'file' => 'data/component-list.laminas.json',
+    'mvc' => [
+        'title'    => 'MVC',
+        'subtitle' => 'MVC for Enterprise Applications',
+        'file'     => 'data/component-list.mvc.json',
     ],
-    'mezzio' => [
-        'title' => 'Mezzio: PSR-15 Middleware in Minutes',
-        'file' => 'data/component-list.mezzio.json',
+    'components' => [
+        'title'    => 'Components',
+        'subtitle' => 'Components for Enterprise Applications',
+        'file'     => 'data/component-list.components.json',
     ],
 ];
 
+$section = $argv[1] ?? null;
+if (! array_key_exists($section, PROJECT_INFO)) {
+    die('Wrong parameter!');
+}
+
+const GROUP_TEMPLATE = <<< 'END'
+<h4>{name}</h4>
+<div class="row row-cols-1 row-cols-md-2">
+{packages}
+</div>
+END;
+
 const CARD_TEMPLATE = <<< 'END'
-    <div class="col mb-4">
+<div class="col mb-4">
+    <a href="{url}">
         <div class="card h-100">
-            <div class="card-header bg-{project} text-white">
+            <div class="card-header">
                 {package}
             </div>
             <div class="card-body">
-                <h5 class="card-title"><a href="{url}">{name}</a></h5>
+                <h5 class="card-title">{name}</h5>
                 <p class="card-text">{description}</p>
             </div>
         </div>
-    </div>
+    </a>
+</div>
 
 END;
 
 const DECK_TEMPLATE = <<< 'END'
-<h3 class="text-{project}">{title}</h3>
-<div class="row row-cols-1 row-cols-md-3">
-{packages}
-</div>
-
-
+<h3 class="display-4">Documentation of {title}<br>
+    <small class="text-muted">{subtitle}</small>
+</h3>
+<hr>
+{content}
 END;
 
-function preparePackage(array $package, string $project) : string
+function preparePackage(array $package) : string
 {
-    $card = str_replace('{project}', $project, CARD_TEMPLATE);
+    $card = CARD_TEMPLATE;
     foreach ($package as $key => $value) {
         $search = sprintf('{%s}', $key);
         $card = str_replace($search, $value, $card);
@@ -47,22 +62,50 @@ function preparePackage(array $package, string $project) : string
     return $card;
 }
 
-function prepareProject(string $name, string $title, array $project) : string
+function prepareGroup(string $name, array $packages) : string
 {
-    $packages = array_map(function ($package) use ($name) {
-        return preparePackage($package, $name);
-    }, $project);
+    $htmlBlocks = array_map(static function ($package) {
+        return preparePackage($package);
+    }, $packages);
 
     return str_replace(
         [
-            '{project}',
-            '{title}',
+            '{name}',
             '{packages}',
+            '<h4></h4>',
         ],
         [
             $name,
+            implode("\n", $htmlBlocks),
+            '',
+        ],
+        GROUP_TEMPLATE
+    );
+}
+
+function prepareProject(array $project, string $title, string $subtitle) : string
+{
+    $groupedPackages = [];
+    foreach ($project as $package) {
+        $groupedPackages[$package['group']][] = $package;
+    }
+    ksort($groupedPackages);
+
+    $html = '';
+    foreach ($groupedPackages as $group => $packages) {
+        $html .= prepareGroup($group, $packages);
+    }
+
+    return str_replace(
+        [
+            '{content}',
+            '{title}',
+            '{subtitle}',
+        ],
+        [
+            $html,
             $title,
-            implode("\n", $packages),
+            $subtitle
         ],
         DECK_TEMPLATE
     );
@@ -87,9 +130,10 @@ function injectProjectContent(string $content, string $file) : void
 
 chdir(dirname(__DIR__));
 
-$content = '';
-foreach (PROJECT_INFO as $project => $projectInfo) {
-    $content .= prepareProject($project, $projectInfo['title'], fetchProject($projectInfo['file']));
-}
+$content = prepareProject(
+    fetchProject(PROJECT_INFO[$section]['file']),
+    PROJECT_INFO[$section]['title'],
+    PROJECT_INFO[$section]['subtitle']
+);
 
-injectProjectContent($content, './index.html');
+injectProjectContent($content, sprintf('./%s/index.html', $section));
