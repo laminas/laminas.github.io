@@ -1,5 +1,5 @@
 {
-    "name": "laminas/laminas.github.io",
+    "name": "laminas.github.io",
     "version": "1.0.0",
     "description": "Laminas Documentation Theme",
     "main": "gulpfile.js",
