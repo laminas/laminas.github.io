@@ -34,8 +34,17 @@
     }
 
     & > h3 {
+        /*font-weight: $lower-headings-font-weight;
+        margin-top: map_get($spacers, 4);*/
+        text-align: center;
+    }
+
+    & > h4 {
         font-weight: $lower-headings-font-weight;
-        margin-top: map_get($spacers, 4);
+        margin-top: map_get($spacers, 5);
+        margin-bottom: map_get($spacers, 4);
+        text-transform: uppercase;
+        padding-left: $card-spacer-x;
     }
 
     .chapter__headline {
