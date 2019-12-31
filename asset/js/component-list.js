@@ -2,8 +2,9 @@
 
 {
     const urls = {
-        'laminas': 'https://laminas.github.io/data/component-list.laminas.json',
-        'mezzio': 'https://laminas.github.io/data/component-list.mezzio.json'
+        'components': 'https://docs.laminas.dev/data/component-list.components.json',
+        'mezzio': 'https://docs.mezzio.dev/data/component-list.mezzio.json',
+        'mvc': 'https://docs.laminas.dev/data/component-list.mvc.json',
     };
 
     function getContainerElements() {
