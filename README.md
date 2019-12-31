@@ -30,13 +30,19 @@ when done.
 
 You can add or edit components in the file:
 
-- `data/component-list.laminas.json`
-- `data/component-list.mezzio.json`
+- `data/component-list.components.json`
+- `data/component-list.mvc.json`
 
-Whenever you do, update the homepage using:
+Whenever you do, update the pages with package lists using:
 
 ```bash
-$ php build/build-component-lists.php
+$ php build/build-component-lists.php components
+```
+
+and 
+
+```bash
+$ php build/build-component-lists.php mvc
 ```
 
 Preview the project using:
@@ -45,6 +51,14 @@ Preview the project using:
 $ php -S 0:8000 -t .
 ```
 
-and then browsing to http://localhost:8000
+and then browsing to:
 
-Check in changes to `index.html` when done.
+* http://localhost:8000
+* http://localhost:8000/components
+* http://localhost:8000/mvc
+
+When done, check in changes to:
+
+* `index.html`
+* `components/index.html`
+* `mvc/index.html`
