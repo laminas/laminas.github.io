@@ -10,6 +10,12 @@
         return document.querySelectorAll('.component-selector');
     }
 
+    function hideContainerElements() {
+        getContainerElements().forEach(element => {
+            element.classList.add('d-none');
+        });
+    }
+
     function prepareComponentList(components) {
         let componentList = [];
 
@@ -158,8 +164,17 @@
     // When the window has finished loading the DOM, fetch the components and
     // populate the dropdown.
     window.addEventListener('load', function () {
+        if (!project || !urls.hasOwnProperty(project)) {
+            hideContainerElements();
+
+            return;
+        }
+
         fetch(urls[project])
             .then(response => response.json())
-            .then(data => prepareComponentList(data));
+            .then(data => prepareComponentList(data))
+            .catch(() => {
+                hideContainerElements();
+            });
     });
 }
