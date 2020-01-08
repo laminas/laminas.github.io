@@ -170,13 +170,24 @@ $ git commit -m 'Initial import'
 <p>In this case, require it as you would any other dependency:</p>
 
 <pre class="codehilite language-bash"><code class="language-bash">
-$ composer require laminas/laminas-migration
+$ composer require --dev laminas/laminas-migration
 </code></pre>
 
 <p>
     For purposes of usage, when we refer to the <code>laminas-migration</code> CLI tool, the
     path will be <code>./vendor/bin/laminas-migration</code>.
 </p>
+
+<blockquote>
+    <p>
+        If you choose this option, make sure you remove the migration tooling
+        when you are done with your migration:
+    </p>
+
+    <pre class="codehilite language-bash"><code class="language-bash">
+    $ composer remove --dev laminas/laminas-migration
+    </code></pre>
+</blockquote>
 
 <h3 id="2-via-a-global-composer-requirement">2. Via a global composer requirement</h3>
 
