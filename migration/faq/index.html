@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAQ for Laminas migrations.">
+    <link rel="shortcut icon" href="/img/trademark-laminas-foundation-rgb.svg">
+    <title>Laminas Migration FAQ</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body id="page-top" class="overview">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="logo-link navbar-brand" href="https://getlaminas.org/" data-tooltip data-placement="bottom" title="Go to the Laminas homepage">
+            <img src="https://docs.laminas.dev/img/laminas-foundation-white.svg" height="28" alt="Laminas">
+        </a>
+        <a class="navbar-title" href="https://docs.laminas.dev/" data-tooltip
+           data-placement="bottom" title="Go to the Laminas Documentation">
+            Documentation
+        </a>
+
+        <button type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                            All Docs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="https://docs.laminas.dev/components">Components</a>
+                            <a class="dropdown-item" href="https://docs.mezzio.dev/">Mezzio</a>
+                            <a class="dropdown-item" href="https://api-tools.getlaminas.org/docs">API Tools</a>
+                            <a class="dropdown-item" href="https://docs.laminas.dev/mvc">MVC</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="https://getlaminas.org/participate" class="nav-link">Community</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h1 class="header__title">
+                    Laminas Migration FAQ
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container"><div class="row">
+    <div class="col-md-2 col-sm-12">
+        <div class="toc">
+            <h6 class="toc__headline">On this page</h6>
+
+            <ul class="toc__list">
+                <li class="toc__entry"><a class="toc__link" href="#module-and-config-post-processor-injection">Module and Config Post Processor Injection</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#clear-your-caches">Clear Your Caches</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="col-md-7 col-sm-12 content" data-spy="scroll" data-target=".toc">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page"><a href="../">Migrate to Laminas</a></li>
+                <li class="breadcrumb-item active" aria-current="page">FAQ</li>
+            </ol>
+        </nav>
+
+<h2 id="module-and-config-post-processor-injection">Module and Config Post Processor injection</h2>
+
+<p>
+    If you are migrating an MVC, Apigility, or Expressive application to Laminas,
+    the migration tooling attempts to inject some code in your application. This can
+    fail if you have non-standard configuration.
+</p>
+
+<h3 id="migrating-mvc-and-apigility-applications">Migrating MVC and Apigility applications</h3>
+
+<p>
+    When migrating MVC and Apigility applications to Laminas MVC and Laminas API
+    Tools, the migration tooling attempts to add <code>Laminas\ZendFrameworkBridge</code> as a
+    module to the top of the <code>config/modules.config.php</code> file. If injection fails,
+    add the module in a way appropriate to your application.
+</p>
+
+<h3 id="expressive">Expressive</h3>
+
+<p>
+    When migrating Expressive applications to Mezzio, the migration tooling attempts
+    to add <code>Laminas\ZendFrameworkBridge\ConfigPostProcessor</code> as a post processor
+    class to the <code>ConfigAggregator</code> constructor. The <code>ConfigAggregator</code> constructor
+    has the following signature:
+</p>
+
+<pre class="codehilite language-php"><code class="language-php">
+public function __construct(
+    array $providers = [],
+    ?string $cachedConfigFile = null,
+    array $postProcessors = []
+)
+</code></pre>
+
+<p>
+    Typically, the structure of the <code>config/config.php</code> file in Expressive and
+    Mezzio applications looks like the following:
+</p>
+
+<pre class="codehilite language-php"><code class="language-php">
+$cacheConfig = [
+    'config_cache_path' => 'data/cache/app_config.php',
+];
+
+$aggregator = new ConfigAggregator([
+    // config providers from 3rd party code
+    // ...
+
+    // App-specific modules
+    // ...
+
+    // Include cache configuration
+    new ArrayProvider($cacheConfig),
+
+    // Load application config in a pre-defined order in such a way that local settings
+    // overwrite global settings. (Loaded as first to last):
+    //   - `global.php`
+    //   - `*.global.php`
+    //   - `local.php`
+    //   - `*.local.php`
+    new PhpFileProvider('config/autoload/{{,*.}global,{,*.}local}.php'),
+
+    // Load development config if it exists
+    new PhpFileProvider('config/development.config.php'),
+], $cacheConfig['config_cache_path']);
+
+return $aggregator->getMergedConfig();
+</code></pre>
+
+<p>As such, the migration tooling rewrites the second to last line to read:</p>
+
+<pre class="codehilite language-php"><code class="language-php">
+], $cacheConfig['config_cache_path'], [\Laminas\ZendFrameworkBridge\ConfigPostProcessor::class]);
+</code></pre>
+
+<p>
+    In most cases, failure to inject means that the individual arguments have
+    been pushed to their own line. In such cases, add the third argument as
+    detailed above.
+</p>
+
+<p>
+    In other cases, applications may already be using post processors. If so,
+    add <code>\Laminas\ZendFrameworkBridge\ConfigPostProcessor::class</code> to the list of
+    post processors.
+</p>
+
+<h2 id="clear-your-caches">Clear your caches</h2>
+
+<p>
+    If your application is not running in development mode, you will need to clear
+    any configuration caches you have before testing. If you are using
+    zf-development-mode (which becomes laminas-development-mode!), try enabling
+    development mode:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer development-enable
+</code></pre>
+
+<p>Expressive/Mezzio users can use the <code>clear-config-cache</code> command:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer clear-config-cache
+</code></pre>
+        </main>
+
+        <div class="col-md-3 col-sm-12 sidebar">
+            <div class="subnavigation hidden-print">
+                <h4 class="subnavigation__title"><a href="../">Migration to Laminas</a></h4>
+
+                <ul class="subnavigation__list">
+                    <li class="subnavigation__list-item subnavigation__list-item--active">FAQ</li>
+                </ul>
+            </div>
+        </div>
+</div></div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Laminas</h5>
+                <ul>
+                    <li>Laminas Project <a href="https://getlaminas.org/">The new foundation for the community-supported, open source continuation of Zend Framework</a></li>
+                    <li>Laminas Components and MVC <a href="https://docs.laminas.dev/">Components and MVC for enterprise applications</a></li>
+                    <li>Mezzio <a href="https://getmezzio.org/">PSR-15 middleware in minutes</a></li>
+                    <li>Laminas API Tools <a href="https://api-tools.getlaminas.org/">Build RESTful APIs in minutes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="footer__headline">Support</h4>
+                <ul class="support__list">
+                    <li class="support__list-item">
+                        <a href="https://discourse.laminas.dev" class="support__link" title="Forum"><i class="fa fa-comments"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://laminas.dev/chat" class="support__link" title="Chat"><i class="fa fa-slack"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://github.com/laminas" class="support__link" title="Github"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://twitter.com/getlaminas" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://getlaminas.org/blog/feed-rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://getlaminas.org/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="footer__headline">Copyright</h4>
+                <p>
+                    &copy; 2019 by <a href="https://getlaminas.org/">The Laminas Project</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let base_url = '/',
+        project = 'mvc',
+        siteName = 'Documentation';
+</script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>

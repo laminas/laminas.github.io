@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Documentation on how to migrate to Laminas.">
+    <link rel="shortcut icon" href="/img/trademark-laminas-foundation-rgb.svg">
+    <title>Migrate to Laminas</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body id="page-top" class="overview">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="logo-link navbar-brand" href="https://getlaminas.org/" data-tooltip data-placement="bottom" title="Go to the Laminas homepage">
+            <img src="https://docs.laminas.dev/img/laminas-foundation-white.svg" height="28" alt="Laminas">
+        </a>
+        <a class="navbar-title" href="https://docs.laminas.dev/" data-tooltip
+           data-placement="bottom" title="Go to the Laminas Documentation">
+            Documentation
+        </a>
+
+        <button type="button"
+                class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+                            All Docs
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="https://docs.laminas.dev/components">Components</a>
+                            <a class="dropdown-item" href="https://docs.mezzio.dev/">Mezzio</a>
+                            <a class="dropdown-item" href="https://api-tools.getlaminas.org/docs">API Tools</a>
+                            <a class="dropdown-item" href="https://docs.laminas.dev/mvc">MVC</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="https://getlaminas.org/participate" class="nav-link">Community</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <h1 class="header__title">
+                    Migration to Laminas
+                </h1>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container"><div class="row">
+    <div class="col-md-2 col-sm-12">
+        <div class="toc">
+            <h6 class="toc__headline">On this page</h6>
+
+            <ul class="toc__list">
+                <li class="toc__entry"><a class="toc__link" href="#0-preparation">Preparation</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#1-install-laminas-migration">Install laminas-migration</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#2-run-the-migration-command">Run the migration command</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#3-optional-verify-changes">(Optional) Verify changes</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#4-install-dependencies">Install dependencies</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#5-test">Test</a></li>
+                <li class="toc__entry"><a class="toc__link" href="#summary">Summary</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="col-md-7 col-sm-12 content" data-spy="scroll" data-target=".toc">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Migrate to Laminas</li>
+            </ol>
+        </nav>
+
+<p>
+    Laminas and its subprojects are an open source continuation of
+    <a href="https://github.com/zendframework">Zend Framework</a> and its
+    subprojects, and are the official fork of the project now that it has been
+    archived and abandoned.
+</p>
+
+<blockquote>
+    <p>
+        For purposes of this document, when we refer to "Zend Framework", we mean any
+        package originally provided by the Zend Framework project or its subprojects,
+        <strong>including those provided by <a href="https://apigility.org">Apigility</a> or
+        <a href="https://getexpressive.org">Expressive</a>.</strong>
+    </p>
+</blockquote>
+
+<p>You can migrate:</p>
+
+<ul>
+    <li>Individual projects or applications that depend on Zend Framework, or
+        have dependencies on components that depend on Zend Framework.</li>
+
+    <li>Libraries that depend on Zend Framework components.</li>
+</ul>
+
+<h2 id="0-preparation">0. Preparation</h2>
+
+<h3 id="ensure-you-have-an-up-to-date-composer">Ensure you have an up-to-date Composer</h3>
+
+<p>
+    Due to features of <a href="https://getcomposer.org">Composer</a> our dependency plugin
+    uses, we require Composer 1.7.0 and up. If you're unsure what version you are
+    on, run <code>composer --version</code>. If you are on an older version, run
+    <code>composer self-update</code>.
+</p>
+
+<p>
+    (We assume you use Composer to install Zend Framework, as it is the only
+    supported mechanism currently.)
+</p>
+
+<h3 id="make-sure-your-code-is-under-version-control">Make sure your code is under version control</h3>
+
+<p>
+    The migration tool changes source code, updates tempaltes, modifies your
+    <code>composer.json</code> and removes your <code>composer.lock</code> and
+    <code>vendor/</code> subdirectory, among other things. If you want to be
+    able to roll back in the case of a problem, please make certain your code is
+    under version control!
+</p>
+
+<p>
+    We recommend <a href="https://git-scm.org">Git</a>. If your application is
+    not currently under version control, install git, and then:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ cd path/to/your/application
+$ git init .
+$ echo "vendor/" > .gitignore
+$ git add .
+$ git commit -m 'Initial import'
+</code></pre>
+
+<p>You will then be able to see what changes you introduce.</p>
+
+<h2 id="1-install-laminas-migration">1. Install laminas-migration</h2>
+
+<p>There are three ways to install the tool:</p>
+
+<ol>
+    <li>As a local dependency</li>
+    <li>Via a global composer requirement</li>
+    <li>Via cloning</li>
+</ol>
+
+<h3 id="1-as-a-local-dependency">1. As a local dependency</h3>
+
+<p>In this case, require it as you would any other dependency:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer require laminas/laminas-migration
+</code></pre>
+
+<p>
+    For purposes of usage, when we refer to the <code>laminas-migration</code> CLI tool, the
+    path will be <code>./vendor/bin/laminas-migration</code>.
+</p>
+
+<h3 id="2-via-a-global-composer-requirement">2. Via a global composer requirement</h3>
+
+<p>
+    Composer allows you to require packages in a <em>global</em> context as well. If you
+    choose this option, you will run:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer global require laminas/laminas-migration
+</code></pre>
+
+<p>
+    It is up to you to ensure that the <code>vendor/bin/</code> subdirectory of your global
+    Composer installation is in your environment <code>$PATH</code>. You can locate the global
+    context directory using:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer global config home
+</code></pre>
+
+<blockquote>
+    <h4 id="adding-to-the-path">Adding to the PATH</h4>
+
+    <p>
+        The mechanism for adding to your environment <code>$PATH</code> variable
+        depends on your operating system.
+    </p>
+
+    <p>
+        For Linux, Mac, and other *nix variants, you can do so by adding a line
+        like the following at the end of your profile configuration file (e.g.,
+        <code>$HOME/.bashrc</code>, <code>$HOME/.zshrc</code>,
+        <code>$HOME/.profile</code>, etc.):
+    </p>
+
+    <pre class="codehilite language-bash"><code class="language-bash">
+    export PATH={path to add}:$PATH
+    </code></pre>
+
+    <p>
+        For Windows, the situation is a bit more involved; <a href="https://www.architectryan.com/2018/03/17/add-to-the-path-on-windows-10/">this HOWTO</a>
+        provides a good tutorial on the subject.
+    </p>
+</blockquote>
+
+<h3 id="3-via-cloning">3. via cloning</h3>
+
+<p>Clone the repository somewhere:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ git clone https://github.com/laminas/laminas-migration.git
+</code></pre>
+
+<p>Install dependencies:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ cd laminas-migration
+$ composer install
+</code></pre>
+
+<p>
+    From there, either add the <code>bin/</code> directory to your <code>$PATH</code> (see the
+    <a href="#adding-to-the-path">note on adding to the PATH</a>, above), symlink the
+    <code>bin/laminas-migration</code> script to a directory in your <code>$PATH</code>, or create an
+    alias to the <code>bin/laminas-migration</code> script using your shell:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+# Adding to PATH:
+$ export PATH=/path/to/laminas-migration/bin:$PATH
+# Symlinking to a directory in your PATH:
+$ cd $HOME/bin && ln -s /path/to/laminas-migration/bin/laminas-migration .
+# creating an alias:
+$ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration
+</code></pre>
+
+<h2 id="2-run-the-migration-command">2. Run the migration command</h2>
+
+<p>
+    Once you have installed the laminas-migration tooling, enter a project you wish
+    to migrate, and run the following:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ laminas-migration migrate
+</code></pre>
+
+<p>
+    You may want to use the <code>--exclude</code> or <code>-e</code> option one or
+    more times for directories to <em>exclude</em> from the rewrite, or the
+    <code>--filter</code> or <code>-f</code> option one or more times to provide
+    regular expressions of which files to <em>include</em> in the rewrite.
+</p>
+
+<p>As an example, to exclude the <code>data/</code> subdirectory, you could run:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ laminas-migration migrate -e data
+</code></pre>
+
+<p>For more information on available options, use the command's help function:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ laminas-migration help migrate
+</code></pre>
+
+<h2 id="3-optional-verify-changes">3. (Optional) Verify changes</h2>
+
+<p>
+    At this point, you can verify that the changes look correct. As an example, if
+    you use git, you could run the following command to determine what has changed:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ git diff
+</code></pre>
+
+<p>Things you might want to look for:</p>
+
+<ul>
+    <li>Renaming of files or classes in your own code that reference ZF
+        components. As an example <code>My\Models\ZendMailTransport</code> might
+        get renamed to <code>My\Models\LaminasMailTransport</code>. Such renames
+        are typically okay, and any references to those classes will be rewritten as
+        well. However, if external code may depend on them, you should verify.</li>
+
+    <li>Changes to configuration keys. Most of these are made to match changes
+        in the Laminas libraries themselves, but you should check to see if they
+        are specific to your own code.</li>
+</ul>
+
+<h2 id="4-install-dependencies">4. Install dependencies</h2>
+
+<p>
+    Once migration is done and you've performed any verification steps you need,
+    install dependencies:
+</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer install
+</code></pre>
+
+<h2 id="5-test">5. Test</h2>
+
+<p>
+    Run your unit tests, do end-to-end tests, whatever &mdash; but exercise the
+    application in some way.
+</p>
+
+<p>If anything does not work, determine the specifics, and report either:</p>
+
+<ul>
+    <li>In the repository of the specific component where you are observing problems.</li>
+    <li>The #laminas-issues channel of the <a href="https://laminas.dev/chat/">Laminas Slack</a>.</li>
+</ul>
+
+<h2 id="summary">Summary</h2>
+
+<p>To summarize the steps to migrate:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer global require laminas/laminas-migration
+$ cd some/project
+$ laminas-migration migrate # maybe with -e data or -e data/cache
+$ composer install
+</code></pre>
+
+<p>Questions?</p>
+
+<ul>
+    <li><a href="./faq/">Check the FAQ</a></li>
+    <li><a href="https://laminas.dev/chat/">Visit the Slack</a></li>
+    <li><a href="https://discourse.laminas.dev/">Visit the Forums</a></li>
+</ul>
+        </main>
+
+        <div class="col-md-3 col-sm-12 sidebar">
+            <div class="subnavigation hidden-print">
+                <h4 class="subnavigation__title">Migration to Laminas</h4>
+
+                <ul class="subnavigation__list">
+                    <li class="subnavigation__list-item"><a class="subnavigation__link" href="./faq/">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+</div></div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="footer__button" href="#page-top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Laminas</h5>
+                <ul>
+                    <li>Laminas Project <a href="https://getlaminas.org/">The new foundation for the community-supported, open source continuation of Zend Framework</a></li>
+                    <li>Laminas Components and MVC <a href="https://docs.laminas.dev/">Components and MVC for enterprise applications</a></li>
+                    <li>Mezzio <a href="https://getmezzio.org/">PSR-15 middleware in minutes</a></li>
+                    <li>Laminas API Tools <a href="https://api-tools.getlaminas.org/">Build RESTful APIs in minutes</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="footer__headline">Support</h4>
+                <ul class="support__list">
+                    <li class="support__list-item">
+                        <a href="https://discourse.laminas.dev" class="support__link" title="Forum"><i class="fa fa-comments"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://laminas.dev/chat" class="support__link" title="Chat"><i class="fa fa-slack"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://github.com/laminas" class="support__link" title="Github"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://twitter.com/getlaminas" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://getlaminas.org/blog/feed-rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://getlaminas.org/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="footer__headline">Copyright</h4>
+                <p>
+                    &copy; 2019 by <a href="https://getlaminas.org/">The Laminas Project</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    let base_url = '/',
+        project = 'mvc',
+        siteName = 'Documentation';
+</script>
+<script src="/js/scripts.js"></script>
+</body>
+</html>
