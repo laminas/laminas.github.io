@@ -160,36 +160,12 @@ $ git commit -m 'Initial import'
 <p>There are three ways to install the tool:</p>
 
 <ol>
-    <li>As a local dependency</li>
-    <li>Via a global composer requirement</li>
+    <li>Via a global composer requirement (recommended)</li>
     <li>Via cloning</li>
+    <li>As a local dependency</li>
 </ol>
 
-<h3 id="1-as-a-local-dependency">1. As a local dependency</h3>
-
-<p>In this case, require it as you would any other dependency:</p>
-
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer require --dev laminas/laminas-migration
-</code></pre>
-
-<p>
-    For purposes of usage, when we refer to the <code>laminas-migration</code> CLI tool, the
-    path will be <code>./vendor/bin/laminas-migration</code>.
-</p>
-
-<blockquote>
-    <p>
-        If you choose this option, make sure you remove the migration tooling
-        when you are done with your migration:
-    </p>
-
-    <pre class="codehilite language-bash"><code class="language-bash">
-    $ composer remove --dev laminas/laminas-migration
-    </code></pre>
-</blockquote>
-
-<h3 id="2-via-a-global-composer-requirement">2. Via a global composer requirement</h3>
+<h3 id="via-a-global-composer-requirement">Via a global composer requirement</h3>
 
 <p>
     Composer allows you to require packages in a <em>global</em> context as well. If you
@@ -235,7 +211,7 @@ $ composer global config home
     </p>
 </blockquote>
 
-<h3 id="3-via-cloning">3. via cloning</h3>
+<h3 id="via-cloning">Via cloning</h3>
 
 <p>Clone the repository somewhere:</p>
 
@@ -265,6 +241,30 @@ $ cd $HOME/bin && ln -s /path/to/laminas-migration/bin/laminas-migration .
 # creating an alias:
 $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration
 </code></pre>
+
+<h3 id="as-a-local-dependency">As a local dependency</h3>
+
+<p>In this case, require it as you would any other dependency:</p>
+
+<pre class="codehilite language-bash"><code class="language-bash">
+$ composer require --dev laminas/laminas-migration
+</code></pre>
+
+<p>
+    For purposes of usage, when we refer to the <code>laminas-migration</code> CLI tool, the
+    path will be <code>./vendor/bin/laminas-migration</code>.
+</p>
+
+<blockquote>
+    <p>
+        If you choose this option, make sure you remove the migration tooling
+        when you are done with your migration:
+    </p>
+
+    <pre class="codehilite language-bash"><code class="language-bash">
+    $ composer remove --dev laminas/laminas-migration
+    </code></pre>
+</blockquote>
 
 <h2 id="2-run-the-migration-command">2. Run the migration command</h2>
 
