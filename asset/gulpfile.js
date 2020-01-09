@@ -83,8 +83,8 @@ function js() {
                 'node_modules/bootstrap/dist/js/bootstrap.js',
                 'node_modules/anchor-js/anchor.js',
                 'node_modules/choices.js/public/assets/scripts/choices.js',
-                'node_modules/popper.js/dist/popper.js',
-                'node_modules/popper.js/dist/popper-utils.js',
+                'node_modules/popper.js/dist/umd/popper.js',
+                'node_modules/popper.js/dist/umd/popper-utils.js',
                 'js/component-list.js',
                 'js/base.js'
             ]
