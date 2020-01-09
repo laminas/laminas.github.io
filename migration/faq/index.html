@@ -115,21 +115,18 @@
     has the following signature:
 </p>
 
-<pre class="codehilite language-php"><code class="language-php">
-public function __construct(
+<pre class="codehilite"><code class="language-php">public function __construct(
     array $providers = [],
     ?string $cachedConfigFile = null,
     array $postProcessors = []
-)
-</code></pre>
+)</code></pre>
 
 <p>
     Typically, the structure of the <code>config/config.php</code> file in Expressive and
     Mezzio applications looks like the following:
 </p>
 
-<pre class="codehilite language-php"><code class="language-php">
-$cacheConfig = [
+<pre class="codehilite"><code class="language-php">$cacheConfig = [
     'config_cache_path' => 'data/cache/app_config.php',
 ];
 
@@ -155,14 +152,11 @@ $aggregator = new ConfigAggregator([
     new PhpFileProvider('config/development.config.php'),
 ], $cacheConfig['config_cache_path']);
 
-return $aggregator->getMergedConfig();
-</code></pre>
+return $aggregator->getMergedConfig();</code></pre>
 
 <p>As such, the migration tooling rewrites the second to last line to read:</p>
 
-<pre class="codehilite language-php"><code class="language-php">
-], $cacheConfig['config_cache_path'], [\Laminas\ZendFrameworkBridge\ConfigPostProcessor::class]);
-</code></pre>
+<pre class="codehilite"><code class="language-php">], $cacheConfig['config_cache_path'], [\Laminas\ZendFrameworkBridge\ConfigPostProcessor::class]);</code></pre>
 
 <p>
     In most cases, failure to inject means that the individual arguments have
@@ -185,15 +179,11 @@ return $aggregator->getMergedConfig();
     development mode:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer development-enable
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ composer development-enable</code></pre>
 
 <p>Expressive/Mezzio users can use the <code>clear-config-cache</code> command:</p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer clear-config-cache
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ composer clear-config-cache</code></pre>
         </main>
 
         <div class="col-md-3 col-sm-12 sidebar">
