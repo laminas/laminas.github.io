@@ -148,13 +148,11 @@
     not currently under version control, install git, and then:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ cd path/to/your/application
+<pre class="codehilite"><code class="language-bash">$ cd path/to/your/application
 $ git init .
 $ echo "vendor/" > .gitignore
 $ git add .
-$ git commit -m 'Initial import'
-</code></pre>
+$ git commit -m 'Initial import'</code></pre>
 
 <p>You will then be able to see what changes you introduce.</p>
 
@@ -175,9 +173,7 @@ $ git commit -m 'Initial import'
     choose this option, you will run:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer global require laminas/laminas-migration
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ composer global require laminas/laminas-migration</code></pre>
 
 <p>
     It is up to you to ensure that the <code>vendor/bin/</code> subdirectory of your global
@@ -185,9 +181,7 @@ $ composer global require laminas/laminas-migration
     context directory using:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer global config home
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ composer global config home</code></pre>
 
 <blockquote>
     <h4 id="adding-to-the-path">Adding to the PATH</h4>
@@ -218,16 +212,12 @@ $ composer global config home
 
 <p>Clone the repository somewhere:</p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ git clone https://github.com/laminas/laminas-migration.git
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ git clone https://github.com/laminas/laminas-migration.git</code></pre>
 
 <p>Install dependencies:</p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ cd laminas-migration
-$ composer install
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ cd laminas-migration
+$ composer install</code></pre>
 
 <p>
     From there, either add the <code>bin/</code> directory to your <code>$PATH</code> (see the
@@ -236,22 +226,18 @@ $ composer install
     alias to the <code>bin/laminas-migration</code> script using your shell:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-# Adding to PATH:
+<pre class="codehilite"><code class="language-bash"># Adding to PATH:
 $ export PATH=/path/to/laminas-migration/bin:$PATH
 # Symlinking to a directory in your PATH:
 $ cd $HOME/bin && ln -s /path/to/laminas-migration/bin/laminas-migration .
 # creating an alias:
-$ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration
-</code></pre>
+$ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code></pre>
 
 <h3 id="as-a-local-dependency">As a local dependency</h3>
 
 <p>In this case, require it as you would any other dependency:</p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer require --dev laminas/laminas-migration
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ composer require --dev laminas/laminas-migration</code></pre>
 
 <p>
     For purposes of usage, when we refer to the <code>laminas-migration</code> CLI tool, the
@@ -264,9 +250,7 @@ $ composer require --dev laminas/laminas-migration
         when you are done with your migration:
     </p>
 
-    <pre class="codehilite language-bash"><code class="language-bash">
-    $ composer remove --dev laminas/laminas-migration
-    </code></pre>
+    <pre class="codehilite"><code class="language-bash">$ composer remove --dev laminas/laminas-migration</code></pre>
 </blockquote>
 
 <h2 id="3-run-the-migration-command">3. Run the migration command</h2>
@@ -276,9 +260,7 @@ $ composer require --dev laminas/laminas-migration
     to migrate, and run the following:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ laminas-migration migrate
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ laminas-migration migrate</code></pre>
 
 <p>
     You may want to use the <code>--exclude</code> or <code>-e</code> option one or
@@ -289,13 +271,11 @@ $ laminas-migration migrate
 
 <p>As an example, to exclude the <code>data/</code> subdirectory, you could run:</p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ laminas-migration migrate -e data
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ laminas-migration migrate -e data</code></pre>
 
 <p>For more information on available options, use the command's help function:</p>
 
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ laminas-migration help migrate</code></pre>
 
 <h2 id="5-optional-verify-changes">5. Verify changes <small>(Optional)</small></h2>
 
@@ -304,9 +284,7 @@ $ laminas-migration migrate -e data
     you use git, you could run the following command to determine what has changed:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ git diff
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ git diff</code></pre>
 
 <p>Things you might want to look for:</p>
 
@@ -329,9 +307,7 @@ $ git diff
     install dependencies:
 </p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer install
-</code></pre>
+<pre class="codehilite"><code class="language-bash">$ composer install</code></pre>
 
 <h2 id="6-test">6. Test</h2>
 
@@ -351,12 +327,10 @@ $ composer install
 
 <p>To summarize the steps to migrate:</p>
 
-<pre class="codehilite language-bash"><code class="language-bash">
-$ composer global require laminas/laminas-migration
+<pre class="codehilite"><code class="language-bash">$ composer global require laminas/laminas-migration
 $ cd some/project
 $ laminas-migration migrate # maybe with -e data or -e data/cache
-$ composer install
-</code></pre>
+$ composer install</code></pre>
 
 <p>Questions?</p>
 
