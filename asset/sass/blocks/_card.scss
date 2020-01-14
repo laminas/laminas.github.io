@@ -2,8 +2,17 @@
     border-top: 2px solid var(--primary-color);
     transition: all 0.15s ease-out;
 
-    a:hover & {
-        background-color: var(--primary-color);
-        color: white;
+    > a {
+        flex-grow: 1;
+
+        &:hover {
+            background-color: var(--primary-color);
+            text-decoration: none;
+
+            &,
+            .text-muted {
+                color: white !important;
+            }
+        }
     }
 }
