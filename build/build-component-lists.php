@@ -29,8 +29,8 @@ END;
 
 const CARD_TEMPLATE = <<< 'END'
 <div class="col mb-4">
-    <a href="{url}">
-        <div class="card h-100">
+    <div class="card h-100">
+        <a href="{url}">
             <div class="card-header">
                 {package}
             </div>
@@ -38,8 +38,8 @@ const CARD_TEMPLATE = <<< 'END'
                 <h5 class="card-title">{name}</h5>
                 <p class="card-text">{description}</p>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
 </div>
 
 END;
