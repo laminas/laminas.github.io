@@ -8,7 +8,7 @@
     // Anchors
     anchors.options.placement = 'left';
     anchors.add(
-        '.content h1:not(.content__title), .content h2, .content > h3, .content h4, .content h5'
+        '.content > h1:not(.content__title), .content > h2:not(.chapter__headline), .content > h3:not(.display-4), .content > h4, .content > h5'
     );
 
     // Pre elements
