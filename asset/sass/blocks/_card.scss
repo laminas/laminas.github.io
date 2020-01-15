@@ -13,6 +13,10 @@
             .text-muted {
                 color: white !important;
             }
+
+            img {
+                filter: brightness(0) invert(1);
+            }
         }
     }
 }
