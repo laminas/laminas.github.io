@@ -5,5 +5,10 @@
 .api-tools {
     &-overview {
         background-color: $overiew-body-bg;
+
+        *[class^='display'] {
+            text-align: center;
+            margin-top: 0;
+        }
     }
 }
