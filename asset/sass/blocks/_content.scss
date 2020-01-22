@@ -34,9 +34,8 @@
     }
 
     & > h3 {
-        /*font-weight: $lower-headings-font-weight;
-        margin-top: map_get($spacers, 4);*/
-        text-align: center;
+        font-weight: $lower-headings-font-weight;
+        margin-top: map_get($spacers, 4);
     }
 
     & > h4 {
