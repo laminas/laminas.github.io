@@ -32,6 +32,7 @@ const prism = [
     'php',
     'php-extras',
     'powershell',
+    'properties',
     'puppet',
     'sass',
     'scss',
