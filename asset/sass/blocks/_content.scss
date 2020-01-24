@@ -56,6 +56,17 @@
         font-weight: $lower-headings-font-weight;
     }
 
+    & a {
+        &:link,
+        &:visited {
+            text-decoration: underline;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
     /*p {
         max-width: 80%;
     }*/
