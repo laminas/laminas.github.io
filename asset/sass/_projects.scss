@@ -1,5 +1,5 @@
 .docs-overview {
-    --primary-color: #d0d0d0;
+    --primary-color: #{mix($brand-primary, #fff, 40%)};
 }
 
 .components {
