@@ -79,6 +79,7 @@ function js() {
         prismComponents.concat(
             [
                 'node_modules/prismjs/plugins/normalize-whitespace/prism-normalize-whitespace.js',
+                'node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js',
                 'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
                 'node_modules/jquery/dist/jquery.js',
                 'node_modules/popper.js/dist/umd/popper.js',
