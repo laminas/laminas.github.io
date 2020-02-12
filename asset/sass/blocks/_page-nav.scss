@@ -28,8 +28,13 @@
         border: none;
         color: lighten($body-color, 15%);
 
+        &:link,
+        &:visited {
+            text-decoration: none !important;
+        }
+
         &:hover {
-            text-decoration: none;
+            text-decoration: underline;
             color: $link-color;
         }
     }
