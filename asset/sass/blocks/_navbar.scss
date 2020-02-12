@@ -1,5 +1,6 @@
 .navbar {
     border: none;
+    flex-shrink: 0;
 
     a {
         &:focus {
