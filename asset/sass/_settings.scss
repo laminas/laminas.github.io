@@ -1,5 +1,4 @@
 // Colors
-$header-footer-bg-color: rgb(60, 65, 70);
 $header-footer-font-color: #fff;
 $footer-bg-color: hsl(201, 98%, 6%);
 $separater-color: #efefef;
@@ -47,7 +46,7 @@ $border-radius-base: 0;
 
 // Navbar
 $navbar-default-color: $header-footer-font-color;
-$navbar-default-bg: $header-footer-bg-color;
+$navbar-default-bg: $brand-primary;
 
 $navbar-default-link-color: $header-footer-font-color;
 $navbar-default-link-hover-color: white;
