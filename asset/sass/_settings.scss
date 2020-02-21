@@ -1,10 +1,11 @@
 // Colors
-$header-footer-bg-color: rgb(60, 65, 70);
 $header-footer-font-color: #fff;
+$footer-bg-color: hsl(201, 98%, 6%);
 $separater-color: #efefef;
 $text-color-secondary: rgb(119, 119, 119);
 $text-color-reduced: rgb(150, 152, 154);
 $overiew-body-bg: #f9fafb;
+$code-sample-bg-color: rgb(60, 65, 70);
 
 $projectColors : (
     api-tools: #E5007D,
@@ -45,7 +46,7 @@ $border-radius-base: 0;
 
 // Navbar
 $navbar-default-color: $header-footer-font-color;
-$navbar-default-bg: $header-footer-bg-color;
+$navbar-default-bg: $brand-primary;
 
 $navbar-default-link-color: $header-footer-font-color;
 $navbar-default-link-hover-color: white;
@@ -75,14 +76,6 @@ $pager-border-radius: none;
 
 // Modal
 $modal-md: 60em;
-
-// Tabs
-$nav-tabs-border-color: transparent;
-$nav-tabs-link-hover-border-color: transparent;
-
-$nav-tabs-active-link-hover-bg: $header-footer-bg-color;
-$nav-tabs-active-link-hover-color: $brand-primary;
-$nav-tabs-active-link-hover-border-color: $header-footer-bg-color;
 
 // Card
 $card-cap-bg : transparent;
