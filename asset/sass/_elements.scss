@@ -43,7 +43,7 @@ pre[class*="language-"] {
     font-size: 13px;
     border-radius: 0;
     border: none;
-    background-color: $header-footer-bg-color;
+    background-color: $code-sample-bg-color;
     margin-top: map_get($spacers, 3);
     margin-bottom: map_get($spacers, 3);
 }
