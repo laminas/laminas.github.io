@@ -12,10 +12,20 @@
             &.active {
                 color: white;
                 background-color: #3c4146;
+
+                &:hover {
+                    background-color: #3c4146;
+                }
+            }
+
+            &:link,
+            &:visited {
+                text-decoration: none;
             }
 
             &:hover {
-                color: $brand-primary;
+                color: white;
+                background-color: darken(#eee, 30%);
             }
         }
     }
