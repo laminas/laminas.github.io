@@ -22,7 +22,7 @@
 
     // Shift window
     const shiftWindow = function () {
-        scrollBy(0, -50)
+        scrollBy(0, -15)
     };
     if (location.hash) {
         shiftWindow();
