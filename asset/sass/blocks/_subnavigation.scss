@@ -57,12 +57,12 @@
                 &:visited {
                     color: $link-color;
 
+                    &::after {
+                        content: " «";
+                    }
+
                     @include media-breakpoint-down(sm) {
                         color: $white;
-
-                        &::after {
-                            content: " *";
-                        }
                     }
                 }
             }
