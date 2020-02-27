@@ -1,6 +1,5 @@
 .header {
     background-color: var(--primary-color);
-    margin-bottom: map_get($spacers, 5);
     padding: map_get($spacers, 3) 0;
 
     &__title {
