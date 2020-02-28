@@ -9,7 +9,7 @@
     <title>Migrate to Laminas</title>
     <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body id="page-top" class="docs-overview">
+<body id="page-top" data-spy="scroll" data-target=".toc" data-offset="20">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         <a class="logo-link navbar-brand" href="https://getlaminas.org/" data-tooltip data-placement="bottom" title="Go to the Laminas homepage">
@@ -66,23 +66,21 @@
 </header>
 
 <div class="container"><div class="row">
-    <div class="col-md-2 col-sm-12">
+    <main class="col-md-9 col-sm-12 content">
         <div class="toc">
             <h6 class="toc__headline">On this page</h6>
 
             <ul class="toc__list">
-                <li class="toc__entry"><a class="toc__link" href="#1-preparation">Preparation</a></li>
-                <li class="toc__entry"><a class="toc__link" href="#2-install-laminas-migration">Install laminas-migration</a></li>
-                <li class="toc__entry"><a class="toc__link" href="#3-run-the-migration-command">Run the migration command</a></li>
-                <li class="toc__entry"><a class="toc__link" href="#4-optional-verify-changes">Verify changes (optional)</a></li>
-                <li class="toc__entry"><a class="toc__link" href="#5-install-dependencies">Install dependencies</a></li>
-                <li class="toc__entry"><a class="toc__link" href="#6-test">Test</a></li>
-                <li class="toc__entry"><a class="toc__link" href="#summary">Summary</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#preparation">Preparation</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#install-laminas-migration">Install laminas-migration</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#run-the-migration-command">Run the migration command</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#optional-verify-changes">Verify changes (optional)</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#install-dependencies">Install dependencies</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#test">Test</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#summary">Summary</a></li>
             </ul>
         </div>
-    </div>
 
-    <main class="col-md-7 col-sm-12 content" data-spy="scroll" data-target=".toc">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/">Overview</a></li>
@@ -117,7 +115,7 @@
     <li>Libraries that depend on Zend Framework components.</li>
 </ul>
 
-<h2 id="1-preparation">1. Preparation</h2>
+<h2 id="preparation">1. Preparation</h2>
 
 <h3 id="ensure-you-have-an-up-to-date-composer">Ensure you have an up-to-date Composer</h3>
 
@@ -156,7 +154,7 @@ $ git commit -m 'Initial import'</code></pre>
 
 <p>You will then be able to see what changes you introduce.</p>
 
-<h2 id="2-install-laminas-migration">2. Install laminas-migration</h2>
+<h2 id="install-laminas-migration">2. Install laminas-migration</h2>
 
 <p>There are three ways to install the tool:</p>
 
@@ -253,7 +251,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
     <pre class="codehilite"><code class="language-bash">$ composer remove --dev laminas/laminas-migration</code></pre>
 </blockquote>
 
-<h2 id="3-run-the-migration-command">3. Run the migration command</h2>
+<h2 id="run-the-migration-command">3. Run the migration command</h2>
 
 <p>
     Once you have installed the laminas-migration tooling, enter a project you wish
@@ -277,7 +275,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
 
 <pre class="codehilite"><code class="language-bash">$ laminas-migration help migrate</code></pre>
 
-<h2 id="4-optional-verify-changes">4. Verify changes <small>(optional)</small></h2>
+<h2 id="optional-verify-changes">4. Verify changes <small>(optional)</small></h2>
 
 <p>
     At this point, you can verify that the changes look correct. As an example, if
@@ -300,7 +298,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
         are specific to your own code.</li>
 </ul>
 
-<h2 id="5-install-dependencies">5. Install dependencies</h2>
+<h2 id="install-dependencies">5. Install dependencies</h2>
 
 <p>
     Once migration is done and you've performed any verification steps you need,
@@ -309,7 +307,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
 
 <pre class="codehilite"><code class="language-bash">$ composer install</code></pre>
 
-<h2 id="6-test">6. Test</h2>
+<h2 id="test">6. Test</h2>
 
 <p>
     Run your unit tests, do end-to-end tests, whatever &mdash; but exercise the
