@@ -1,7 +1,14 @@
 .content {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding-top: map_get($spacers, 5);
+    padding-bottom: map_get($spacers, 5);
 
+    @include media-breakpoint-up(sm) {
+        padding-right: map_get($spacers, 5);
+    }
+    
     &__title,
     h1:first-of-type {
         order: -2;
@@ -66,8 +73,4 @@
             text-decoration: none;
         }
     }
-
-    /*p {
-        max-width: 80%;
-    }*/
 }

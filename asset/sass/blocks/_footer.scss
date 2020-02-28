@@ -2,7 +2,6 @@
     background-color: $footer-bg-color;
     color: darken($header-footer-font-color, 15%);
     padding: map_get($spacers, 3) 0 map_get($spacers, 3);
-    margin-top: map_get($spacers, 5);
     border-top: 5px solid var(--primary-color);
 
     @include media-breakpoint-down(sm) {

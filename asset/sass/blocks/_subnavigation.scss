@@ -56,13 +56,14 @@
                 &:link,
                 &:visited {
                     color: $link-color;
+                    font-weight: bold;
+
+                    &::after {
+                        content: " «";
+                    }
 
                     @include media-breakpoint-down(sm) {
                         color: $white;
-
-                        &::after {
-                            content: " *";
-                        }
                     }
                 }
             }

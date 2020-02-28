@@ -1,13 +1,17 @@
 .toc {
-    /*margin-left: map_get($spacers, 3);*/
-    /*margin-top: 0;*/
-    /*margin-bottom: map_get($spacers, 5);
-    order: -1;*/
+    margin-bottom: map_get($spacers, 4);
+    margin-left: map_get($spacers, 4);
 
-    top: 3rem;
-    margin-top: 6rem;
-    position: sticky;
-    border-right: 1px solid $separater-color;
+    @media (min-width: 1750px) {
+        margin-top: 6rem;
+        margin-left: -20rem;
+        margin-bottom: 0;
+        position: fixed;
+        border-right: 1px solid $separater-color;
+        padding-right: map_get($spacers, 3);
+        width: 18rem;
+        text-align: right;
+    }
 
     @include media-breakpoint-down(sm) {
         margin-bottom: map_get($spacers, 3);
@@ -23,20 +27,33 @@
         list-style-type: none;
         padding-left: 0;
         margin-bottom: 0;
-        font-size: $font-size-small;
+        font-size: $font-size-base * 0.9;
 
         &-item {
             border: none;
         }
     }
 
+    &__entry {
+        padding: 3px 0;
+    }
+
     &__link {
         padding: 2px 0;
-        display: block;
+        display: inline-block;
 
         &:link,
         &:visited {
             color: $text-color-secondary;
+            text-decoration: none !important;
+        }
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+
+        &.active {
+            font-weight: bold;
         }
     }
 }
