@@ -4,7 +4,11 @@
 .mezzio,
 .api-tools {
     &-overview {
-        background-color: $overiew-body-bg;
+        background: $overiew-body-bg;
+
+        .content {
+            background-color: transparent;
+        }
 
         *[class^='display'] {
             text-align: center;
