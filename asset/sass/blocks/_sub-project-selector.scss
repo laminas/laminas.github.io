@@ -31,7 +31,8 @@
         }
 
         .row {
-            margin-bottom: map_get($spacers, 3);
+            margin-top: map_get($spacers, 2);
+            margin-bottom: map_get($spacers, 2);
         }
 
         &::before {
@@ -60,5 +61,10 @@
 
     .dropdown-item {
         color: $link-color;
+
+        &--secondardy .row {
+            margin-top: map_get($spacers, 1);
+            margin-bottom: map_get($spacers, 1);
+        }
     }
 }
