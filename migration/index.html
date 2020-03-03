@@ -288,7 +288,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
             encourage you to upgrade to the latest packages.</strong>
     </p>
 
-    <pre class="codehilite"><code class="language-bash">$ laminas-migration migrate -e data --keep-package-versions</code></pre>
+    <pre class="codehilite"><code class="language-bash">$ laminas-migration migrate -e data --keep-locked-versions</code></pre>
 </blockquote>
 
 <p>For more information on available options, use the command's help function:</p>
@@ -344,7 +344,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
 
 <h2 id="post-migration-optional">Post migration <small>(optional)</small></h2>
 
-<p>In case the <code>--keep-package-versions</code> flag was used, you definitely want to diff the <code>composer.json</code> and restore the old package constraints and remove the packages which were not required on project level before migration. After cleaning up the <code>composer.json</code>, you have to update the <code>composer.lock</code> by using the following command:
+<p>In case the <code>--keep-locked-versions</code> flag was used, you definitely want to diff the <code>composer.json</code> and restore the old package constraints and remove the packages which were not required on project level before migration. After cleaning up the <code>composer.json</code>, you have to update the <code>composer.lock</code> by using the following command:
         <pre class="codehilite"><code class="language-bash">$ composer update --lock</code></pre>
 </p>
 
