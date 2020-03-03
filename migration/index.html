@@ -77,7 +77,7 @@
                 <li class="toc__entry"><a class="toc__link nav-link" href="#optional-verify-changes">Verify changes (optional)</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#install-dependencies">Install dependencies</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#test">Test</a></li>
-                <li class="toc__entry"><a class="toc__link nav-link" href="#post-migration">Post migration</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#post-migration-optional">Post migration (optional)</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#summary">Summary</a></li>
             </ul>
         </div>
@@ -342,7 +342,7 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
     <li>The #laminas-issues channel of the <a href="https://laminas.dev/chat/">Laminas Slack</a>.</li>
 </ul>
 
-<h2 id="post-migration">Post migration</h2>
+<h2 id="post-migration-optional">Post migration <small>(optional)</small></h2>
 
 <p>In case the <code>--keep-package-versions</code> flag was used, you definitely want to diff the <code>composer.json</code> and restore the old package constraints and remove the packages which were not required on project level before migration. After cleaning up the <code>composer.json</code>, you have to update the <code>composer.lock</code> by using the following command:
         <pre class="codehilite"><code class="language-bash">$ composer update --lock</code></pre>
