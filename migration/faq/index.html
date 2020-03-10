@@ -251,13 +251,15 @@ return $aggregator->getMergedConfig();</code></pre>
 </p>
 
 <p>
-    First, <strong>make a note of the zendframework/zendframework
+    To prepare, <strong>make a note of the zendframework/zendframework
     version</strong> you have installed. You can find this by running
     <code>composer show</code> and noting the version.
 </p>
 
+<h3>Identify Packages You Use</h3>
+
 <p>
-    Second, you'll need to <strong>identify which individual packages</strong>
+    The first step is to <strong>identify which individual packages</strong>
     you actually consume. 
 </p>
 
@@ -281,20 +283,46 @@ $ grep -rP 'use (Zend|ZF)' {source code directories} | uniq | sort
 <p>
     The above will provide a list of namespaces and classes that you are
     importing in your project. From there, you can match those namespaces to the
-    appropriate package. As an example,
-    <code>Zend\\Mvc\\Controller\\AbstractController</code> would translate to the
-    zendframework/zend-mvc package, <code>Zend\\Form\\Form</code> would
-    translate to zendframework/zend-form, etc.
+    appropriate package. As examples:
 </p>
 
+<ul>
+    <li><code>Zend\Mvc\Controller\AbstractController</code> would translate to
+        the zendframework/zend-mvc package.</li>
+    <li><code>Zend\Form\Form</code> would translate to the zendframework/zend-form package.</li>
+    <li><code>Zend\Navigation\Page\Mvc</code> would translate to the
+        zendframework/zend-navigation package.</li>
+    <li>And so on.</li>
+</ul>
+
+<h3>Remove Old Dependencies</h3>
+
 <p>
-    Once you have your list of packages, <strong>remove the
-        zendframework/zendframework</strong> package from your
-    <code>composer.json</code> file, remove your <code>composer.lock</code>
-    file, and remove your <code>vendor/</code> directory. From there, for each
-    package you've identified, run <code>composer require
-    "{package}:~{version}"</code>.
+    Once you have your list of packages, you need to remove a few things from
+    your application:
 </p>
+
+<ul>
+    <li>Remove your <code>composer.lock</code> file.</li>
+    <li>Remove your <code>vendor/</code> subdirectory.</li>
+    <li>In your <code>composer.json</code> file, remove the entry for
+        <code>zendframework/zendframework</code>.</li>
+</ul>
+
+<h3>Install Individual Packages</h3>
+
+<p>
+    Now that you have prepared the application, you can install the list of
+    dependencies you have compiled. For each package in that list, run:
+</p>
+
+<pre class="codehilite"><code class="language-bash" data-trim>
+$ composer require "{package}:~{version}"
+</pre>
+
+Substituting the package you want to install, and the version you noted earlier.
+
+<h3>Test and Migrate</h3>
 
 <p>
     At this point you will have replaced the zendframework/zendframework
