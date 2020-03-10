@@ -130,6 +130,7 @@
             <ul class="toc__list">
                 <li class="toc__entry"><a class="toc__link nav-link" href="#module-and-config-post-processor-injection">Module and Config Post Processor Injection</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#clear-your-caches">Clear Your Caches</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#migrating-with-a-zendframework-zendframework-package">Migrating with a zendframework/zendframework package</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#zend-framework-v1-considerations">Zend Framework v1 Considerations</a></li>
             </ul>
         </div>
@@ -239,6 +240,73 @@ return $aggregator->getMergedConfig();</code></pre>
 <p>Expressive/Mezzio users can use the <code>clear-config-cache</code> command:</p>
 
 <pre class="codehilite"><code class="language-bash">$ composer clear-config-cache</code></pre>
+
+<h2 id="migrating-with-a-zendframework-zendframework-package">Migrating With A zendframework/zendframework Package</h2>
+
+<p>
+    If you have chosen to install the package zendframework/zendframework in
+    your application, or if you started your project from the skeleton
+    application before the 3.0 release, you will have some extra steps in your
+    migration.
+</p>
+
+<p>
+    First, <strong>make a note of the zendframework/zendframework
+    version</strong> you have installed. You can find this by running
+    <code>composer show</code> and noting the version.
+</p>
+
+<p>
+    Second, you'll need to <strong>identify which individual packages</strong>
+    you actually consume. 
+</p>
+
+<p>
+    From a *nix or Mac command-line, you can run code similar to the following
+    to get a list of uniquely imported classes:
+</p>
+
+<pre class="codehilite"><code class="language-bash" data-trim>
+$ grep -rP 'use (Zend|ZF)' {source code directories} | uniq | sort
+</pre>
+
+<p>
+    Where <code>{source code directories}</code> can be one or more of <code>src/</code>,
+    <code>modules/</code>, <code>config/</code>, <code>bin/</code>,
+    <code>public/</code> etc., but NOT <code>vendor/</code>. You will want to
+    ensure every such directory is listed. If you are using an IDE, you may be
+    able to do a project-wide search
+</p>
+
+<p>
+    The above will provide a list of namespaces and classes that you are
+    importing in your project. From there, you can match those namespaces to the
+    appropriate package. As an example,
+    <code>Zend\\Mvc\\Controller\\AbstractController</code> would translate to the
+    zendframework/zend-mvc package, <code>Zend\\Form\\Form</code> would
+    translate to zendframework/zend-form, etc.
+</p>
+
+<p>
+    Once you have your list of packages, <strong>remove the
+        zendframework/zendframework</strong> package from your
+    <code>composer.json</code> file, remove your <code>composer.lock</code>
+    file, and remove your <code>vendor/</code> directory. From there, for each
+    package you've identified, run <code>composer require
+    "{package}:~{version}"</code>.
+</p>
+
+<p>
+    At this point you will have replaced the zendframework/zendframework
+    dependency with the individual packages you are actually using in your
+    application. From here, you should run your test suite and any quality
+    assurance routines to verify that the application still works as expected.
+</p>
+
+<p>
+    Assuming all tests pass, you will now be ready to run your migration to
+    Laminas.
+</p>
 
 <h2 id="zend-framework-v1-considerations">Zend Framework v1 Considerations</h2>
 
