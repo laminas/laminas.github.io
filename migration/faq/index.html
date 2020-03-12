@@ -268,7 +268,7 @@ return $aggregator->getMergedConfig();</code></pre>
     to get a list of uniquely imported classes:
 </p>
 
-<pre class="codehilite"><code class="language-bash" data-trim>
+<pre class="codehilite"><code class="language-bash">
 $ grep -rP 'use (Zend|ZF)' {source code directories} | uniq | sort
 </code></pre>
 
@@ -316,7 +316,7 @@ $ grep -rP 'use (Zend|ZF)' {source code directories} | uniq | sort
     dependencies you have compiled. For each package in that list, run:
 </p>
 
-<pre class="codehilite"><code class="language-bash" data-trim>
+<pre class="codehilite"><code class="language-bash">
 $ composer require "{package}:~{version}"
 </pre>
 
