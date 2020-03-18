@@ -1,1 +1,1 @@
-exclude: ['./README.md', 'asset/']
+exclude: ['./README.md', 'asset/', 'build/']
