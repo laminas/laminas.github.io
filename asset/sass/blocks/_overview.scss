@@ -8,6 +8,12 @@
 
         .content {
             background-color: transparent;
+
+            & > h4 {
+                margin-top: map_get($spacers, 5);
+                text-transform: uppercase;
+                padding-left: $card-spacer-x;
+            }
         }
 
         *[class^='display'] {
