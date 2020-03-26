@@ -129,6 +129,7 @@
 
             <ul class="toc__list">
                 <li class="toc__entry"><a class="toc__link nav-link" href="#module-and-config-post-processor-injection">Module and Config Post Processor Injection</a></li>
+                <li class="toc__entry"><a class="toc__link nav-link" href="#alias-rewrites-and-3rd-party-packages">Alias Rewrites</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#clear-your-caches">Clear Your Caches</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#migrating-with-a-zendframework-zendframework-package">Migrating with a zendframework/zendframework package</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#zend-framework-v1-considerations">Zend Framework v1 Considerations</a></li>
@@ -224,6 +225,80 @@ return $aggregator->getMergedConfig();</code></pre>
     In other cases, applications may already be using post processors. If so,
     add <code>\Laminas\ZendFrameworkBridge\ConfigPostProcessor::class</code> to the list of
     post processors.
+</p>
+
+<h2 id="alias-rewrites-and-3rd-party-packages">Alias Rewrites and 3rd Party Packages</h2>
+
+<p>
+    While we have made huge efforts to prevent the migration tooling from
+    clobbering your own code, there is two scenarios where we often cannot avoid
+    it: when importing a namespace, and then referencing a class via that
+    namespace; and when using 3rd party packages that reference legacy names.
+</p>
+
+<p>
+    As an example of the first scenario, consider the following usage of a class
+    from the zendframework/zend-expressive-authorization-acl package:
+</p>
+
+<pre class="codehilite"><code class="language-php" data-trim>
+use Zend\Expressive\Authorization\Acl;
+
+// And later:
+$acl = new Acl\ZendAcl();
+</code></pre>
+
+<p>
+    The code above imports the <code>Zend\Expressive\Authorization\Acl</code>
+    namespace, and then later instantiates a class relative to that namespace.
+    Migration will rewrite this to:
+</p>
+
+<pre class="codehilite"><code class="language-php" data-trim>
+use Mezzio\Authorization\Acl;
+
+// And later:
+$acl = new Acl\ZendAcl();
+</code></pre>
+
+<p>
+    The latter line is incorrect at this point; it should read <code>new
+    Acl\LaminasAcl();</code>. You will need to check for such scenarios either
+    via your test suite, or manually. The <a href="http://man7.org/linux/man-pages/man1/grep.1.html">grep</a>
+    tool or your IDE's "find" functionality can help you identify these; search
+    for "Zend" in your codebase after a migration).
+</p>
+
+<p>
+    For the second scenario, sometimes 3rd party packages use the term "Zend",
+    "ZF", "Apigility", or "Expressive" in their namespaces or class names:
+</p>
+
+<pre class="codehilite"><code class="language-php" data-trim>
+use Some\Vendor\ZendAcl;
+
+// And later:
+$acl = new ZendAcl();
+</code></pre>
+
+<p>
+    In the above example, a class name from a 3rd party package contains the
+    word "Zend" in it. After migration, this becomes:
+</p>
+
+<pre class="codehilite"><code class="language-php" data-trim>
+use Some\Vendor\ZendAcl;
+
+// And later:
+$acl = new LaminasAcl();
+</code></pre>
+
+<p>
+    The above is now incorrect, as it's referring to a class that is not
+    imported and thus does not exist. These sorts of changes are harder to
+    locate. Make sure you review your diffs closely, and that you have an
+    adequate test suite, to ensure that the code is exercised; this is the best
+    way to ensure you can catch these changes.
 </p>
 
 <h2 id="clear-your-caches">Clear your caches</h2>
