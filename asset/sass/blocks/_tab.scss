@@ -1,40 +1,51 @@
-.nav-tabs {
-    margin-top: map_get($spacers, 3);
+.tabbed {
+    &-set {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        margin-top: map_get($spacers, 3);
 
-    .nav-item {
-        .nav-link {
+        .tabbed-content {
+            display: none;
+            order: 99;
+            width: 100%;
+
+            pre {
+                margin-top: 0;
+            }
+        }
+
+        label {
+            width: auto;
             color: grey;
             background-color: #eee;
             margin-right: 3px;
-            border-radius: 0;
-            border: none;
-
-            &.active {
-                color: white;
-                background-color: #3c4146;
-
-                &:hover {
-                    background-color: #3c4146;
-                }
-            }
-
-            &:link,
-            &:visited {
-                text-decoration: none;
-            }
+            margin-bottom: 0;
+            padding: .5rem 1rem;
+            cursor: pointer;
 
             &:hover {
-                color: white;
                 background-color: darken(#eee, 30%);
+                color: white;
             }
         }
-    }
-}
 
-.tab {
-    &-pane {
-        pre {
-            margin-top: 0;
+        input {
+            position: absolute;
+            opacity: 0;
+
+            &:nth-child(n+1) {
+                color: #333;
+            }
+
+            &:nth-child(n+1):checked + label {
+                color: white;
+                background-color: #3c4146;
+            }
+
+            &:nth-child(n+1):checked + label + .tabbed-content {
+                display: block;
+            }
         }
     }
 }
