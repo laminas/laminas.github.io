@@ -13,7 +13,13 @@
 
     // Pre elements
     const preElements = document.querySelectorAll('pre');
-    preElements.forEach(element => element.classList.add('line-numbers'));
+    preElements.forEach(element => {
+        if (element.firstElementChild
+            && ! element.firstElementChild.classList.contains('language-treeview')
+        ) {
+            element.classList.add('line-numbers');
+        }
+    });
 
     // Search modal
     $('#mkdocs_search_modal').on('shown.bs.modal', function () {
