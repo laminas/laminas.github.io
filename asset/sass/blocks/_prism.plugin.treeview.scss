@@ -1,0 +1,48 @@
+.token {
+    &.treeview-part {
+        .entry-line {
+            position: relative;
+            text-indent: -99em;
+            display: inline-block;
+            vertical-align: top;
+            width: 1.2em;
+        }
+
+        .entry-line:before,
+        .line-h:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+        }
+
+        .line-h:before,
+        .line-v:before {
+            border-left: 1px solid #ccc;
+        }
+
+        .line-v-last:before {
+            height: 50%;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .line-h:after {
+            height: 50%;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .entry-name {
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            padding: 0 0 0 3px;
+
+            &.dotfile {
+                opacity: 0.5;
+            }
+        }
+    }
+}
