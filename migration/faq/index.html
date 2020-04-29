@@ -128,6 +128,7 @@
             <h6 class="toc__headline">On this page</h6>
 
             <ul class="toc__list">
+                <li class="toc__entry"><a class="toc__link nav-link" href="#memory-limit">Removing the PHP Memory Limit When Migrating</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#module-and-config-post-processor-injection">Module and Config Post Processor Injection</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#alias-rewrites-and-3rd-party-packages">Alias Rewrites</a></li>
                 <li class="toc__entry"><a class="toc__link nav-link" href="#clear-your-caches">Clear Your Caches</a></li>
@@ -145,6 +146,35 @@
         </nav>
 
         <h1>FAQ</h1>
+
+<h2 id="memory-limit">Removing the PHP Memory Limit When Migrating</h2>
+
+<p>
+    In some cases when running the migration tooling, you may run into a fatal
+    error indicating the PHP <code>memory_limit</code> has been reached.
+</p>
+
+<p>
+    To resolve this, you will need to run the <code>laminas-migration</code>
+    tool through the PHP interpreter.
+</p>
+
+<p>
+    First, determine where the script lives:
+</p>
+
+<pre class="codehilite"><code class="language-bash">$ which laminas-migration</code></pre>
+
+<p>
+    Next, when invoking the command, invoke it as follows:
+</p>
+
+<pre class="codehilite"><code class="language-bash">$ php -d memory_limit=-1 path/to/bin/laminas-migration # and any arguments you need</code></pre>
+
+<p>
+    This will disable the memory limit, which should allow your script to finish
+    successfully.
+</p>
 
 <h2 id="module-and-config-post-processor-injection">Module and Config Post Processor injection</h2>
 
