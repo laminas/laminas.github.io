@@ -321,14 +321,20 @@ $acl = new LaminasAcl();
 <p>
     If you have chosen to install the package zendframework/zendframework in
     your application, or if you started your project from the skeleton
-    application before the 3.0 release, you will have some extra steps in your
-    migration.
+    application before the 3.0 release, you will have some extra steps
+    post-migration.
 </p>
 
 <p>
-    To prepare, <strong>make a note of the zendframework/zendframework
-    version</strong> you have installed. You can find this by running
-    <code>composer show</code> and noting the version.
+    First, please make sure you <strong>use version 1.2.0 or later of
+    laminas-migration</strong>. That version provides some important updates
+    that ensure that your zendframework/zendframework package is migrated
+    to the correct Laminas packages.
+</p>
+
+<p>
+    Afterwards, we recommend that you remove any packages you are not explicitly
+    using from your project, per the following steps.
 </p>
 
 <h3>Identify Packages You Use</h3>
@@ -344,7 +350,7 @@ $acl = new LaminasAcl();
 </p>
 
 <pre class="codehilite"><code class="language-bash">
-$ grep -rP 'use (Zend|ZF)' {source code directories} | uniq | sort
+$ grep -rP 'use Laminas' {source code directories} | uniq | sort
 </code></pre>
 
 <p>
@@ -362,53 +368,34 @@ $ grep -rP 'use (Zend|ZF)' {source code directories} | uniq | sort
 </p>
 
 <ul>
-    <li><code>Zend\Mvc\Controller\AbstractController</code> would translate to
-        the zendframework/zend-mvc package.</li>
-    <li><code>Zend\Form\Form</code> would translate to the zendframework/zend-form package.</li>
-    <li><code>Zend\Navigation\Page\Mvc</code> would translate to the
-        zendframework/zend-navigation package.</li>
+    <li><code>Laminas\Mvc\Controller\AbstractController</code> would translate to
+        the laminas/laminas-mvc package.</li>
+    <li><code>Laminas\Form\Form</code> would translate to the laminas/laminas-form package.</li>
+    <li><code>Laminas\Navigation\Page\Mvc</code> would translate to the
+        laminas/laminas-navigation package.</li>
+    <li><code>Laminas\ApiTools\ContentNegotiation\JsonModel</code> would translate to the
+        laminas-api-tools/api-tools-content-negotiation package.</li>
     <li>And so on.</li>
 </ul>
 
 <h3>Remove Old Dependencies</h3>
 
 <p>
-    Once you have your list of packages, you need to remove a few things from
+    Once you have your list of packages that you use, do the following:
     your application:
 </p>
 
 <ul>
-    <li>Remove your <code>composer.lock</code> file.</li>
-    <li>Remove your <code>vendor/</code> subdirectory.</li>
-    <li>In your <code>composer.json</code> file, remove the entry for
-        <code>zendframework/zendframework</code>.</li>
+    <li>Open your <code>composer.json</code> file, and look for any entries
+        related to Laminas packages, and make a list of any Laminas packages 
+        that are not in the list you compiled in the previous step.</li>
+    <li>Run <code>composer remove {package}</code> for each of these
+        packages.</li>
 </ul>
 
-<h3>Install Individual Packages</h3>
-
 <p>
-    Now that you have prepared the application, you can install the list of
-    dependencies you have compiled. For each package in that list, run:
-</p>
-
-<pre class="codehilite"><code class="language-bash">
-$ composer require "{package}:~{version}"
-</code></pre>
-
-Substituting the package you want to install, and the version you noted earlier.
-
-<h3>Test and Migrate</h3>
-
-<p>
-    At this point you will have replaced the zendframework/zendframework
-    dependency with the individual packages you are actually using in your
-    application. From here, you should run your test suite and any quality
-    assurance routines to verify that the application still works as expected.
-</p>
-
-<p>
-    Assuming all tests pass, you will now be ready to run your migration to
-    Laminas.
+    Once done, commit your <code>composer.json</code> and
+    <code>composer.lock</code> file.
 </p>
 
 <h2 id="zend-framework-v1-considerations">Zend Framework v1 Considerations</h2>
