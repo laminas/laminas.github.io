@@ -101,7 +101,7 @@
     "name": "DI",
     "package": "laminas/laminas-di",
     "url": "https://docs.laminas.dev/laminas-di/",
-    "group": "",
+    "group": "Dependency Injection",
     "description": "Automated dependency injection and instance manager."
   },
   {
@@ -318,7 +318,7 @@
     "name": "ServiceManager",
     "package": "laminas/laminas-servicemanager",
     "url": "https://docs.laminas.dev/laminas-servicemanager/",
-    "group": "",
+    "group": "Dependency Injection",
     "description": "Factory-Driven Dependency Injection Container"
   },
   {
