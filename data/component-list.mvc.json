@@ -14,6 +14,13 @@
     "description": "Zend Framework's event-driven MVC layer, including MVC Applications, Controllers, and Plugins."
   },
   {
+    "name": "Middleware",
+    "package": "laminas/laminas-mvc-middleware",
+    "url": "https://docs.laminas.dev/laminas-mvc-middleware/",
+    "group": "Integrations",
+    "description": "Dispatch middleware pipelines in place of controllers in laminas-mvc."
+  },
+  {
     "name": "MVC-Console integration",
     "package": "laminas/laminas-mvc-console",
     "url": "https://docs.laminas.dev/laminas-mvc-console/",
