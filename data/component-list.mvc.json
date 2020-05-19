@@ -1,17 +1,17 @@
 [
   {
-    "name": "Module Manager",
-    "package": "laminas/laminas-modulemanager",
-    "url": "https://docs.laminas.dev/laminas-modulemanager/",
-    "group": "",
-    "description": "Modular application system for laminas-mvc applications."
-  },
-  {
     "name": "MVC",
     "package": "laminas/laminas-mvc",
     "url": "https://docs.laminas.dev/laminas-mvc/",
     "group": "",
     "description": "Zend Framework's event-driven MVC layer, including MVC Applications, Controllers, and Plugins."
+  },
+  {
+    "name": "Module Manager",
+    "package": "laminas/laminas-modulemanager",
+    "url": "https://docs.laminas.dev/laminas-modulemanager/",
+    "group": "",
+    "description": "Modular application system for laminas-mvc applications."
   },
   {
     "name": "Middleware",
