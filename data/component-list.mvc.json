@@ -21,13 +21,6 @@
     "description": "Dispatch middleware pipelines in place of controllers in laminas-mvc."
   },
   {
-    "name": "MVC-Console integration",
-    "package": "laminas/laminas-mvc-console",
-    "url": "https://docs.laminas.dev/laminas-mvc-console/",
-    "group": "Integrations",
-    "description": "[DEPRECATED] Integration between zend-mvc and zend-console."
-  },
-  {
     "name": "MVC-i18n integration",
     "package": "laminas/laminas-mvc-i18n",
     "url": "https://docs.laminas.dev/laminas-mvc-i18n/",
@@ -68,6 +61,13 @@
     "url": "https://docs.laminas.dev/laminas-psr7bridge/",
     "group": "Integrations",
     "description": "PSR-7 &lt;-&gt; zend-http message conversions."
+  },
+  {
+    "name": "MVC-Console integration",
+    "package": "laminas/laminas-mvc-console",
+    "url": "https://docs.laminas.dev/laminas-mvc-console/",
+    "group": "Integrations",
+    "description": "[DEPRECATED] Integration between zend-mvc and zend-console."
   },
   {
     "name": "MVC Testing",
