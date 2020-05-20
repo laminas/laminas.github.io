@@ -4,7 +4,7 @@
     "package": "laminas/laminas-mvc",
     "url": "https://docs.laminas.dev/laminas-mvc/",
     "group": "",
-    "description": "Zend Framework's event-driven MVC layer, including MVC Applications, Controllers, and Plugins."
+    "description": "Laminas' event-driven MVC layer, including MVC Applications, Controllers, and Plugins."
   },
   {
     "name": "Module Manager",
