@@ -1,0 +1,27 @@
+.donation-banner {
+    background-color: $donation-color;
+    padding: map_get($spacers, 3);
+    margin: 0 map_get($spacers, 3) map_get($spacers, 3);
+    color: $white;
+
+    &:hover {
+        background-color: $primary;
+    }
+
+    a {
+        display: block;
+
+        &:link,
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    img {
+        width: 60%;
+    }
+}
