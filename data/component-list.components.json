@@ -35,6 +35,13 @@
     "description": "Generate and validate CAPTCHAs using Figlets, images, ReCaptcha, and more."
   },
   {
+    "name": "ReCaptcha",
+    "package": "laminas/laminas-recaptcha",
+    "url": "https://docs.laminas.dev/laminas-recaptcha/",
+    "group": "Security",
+    "description": "OOP wrapper for the ReCaptcha web service."
+  },
+  {
     "name": "Code",
     "package": "laminas/laminas-code",
     "url": "https://docs.laminas.dev/laminas-code/",
