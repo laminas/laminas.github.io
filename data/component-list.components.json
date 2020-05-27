@@ -199,8 +199,15 @@
     "name": "Internationalization",
     "package": "laminas/laminas-i18n",
     "url": "https://docs.laminas.dev/laminas-i18n/",
-    "group": "",
+    "group": "Internationalization",
     "description": "Provide translations for your application, and filter and validate internationalized values."
+  },
+  {
+    "name": "Translation Resources",
+    "package": "laminas/laminas-i18n-resources",
+    "url": "https://docs.lahttps://docs.laminas.dev/laminas-i18n-resources/",
+    "group": "Internationalization",
+    "description": "Provides validator and captcha translations for laminas-i18n's Translator."
   },
   {
     "name": "JSON",
