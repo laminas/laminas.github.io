@@ -1,7 +1,7 @@
 .donation-banner {
     background-color: $donation-color;
     padding: map_get($spacers, 3);
-    margin: 0 map_get($spacers, 3) map_get($spacers, 3);
+    margin: 0 0 map_get($spacers, 3) map_get($spacers, 3);
     color: $white;
 
     &:hover {
