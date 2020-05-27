@@ -51,3 +51,19 @@ pre[class*="language-"] {
     margin-top: map_get($spacers, 3);
     margin-bottom: map_get($spacers, 3);
 }
+
+details {
+    margin-top: map_get($spacers, 3);
+    margin-bottom: map_get($spacers, 3);
+    border-top: 1px solid darken($separater-color, 10%);
+    border-bottom: 1px solid darken($separater-color, 10%);
+}
+
+summary {
+    font-weight: bold;
+    padding: $spacer * 0.7;
+
+    &:hover {
+        background-color: $separater-color;
+    }
+}
