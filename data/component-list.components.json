@@ -205,7 +205,7 @@
   {
     "name": "Translation Resources",
     "package": "laminas/laminas-i18n-resources",
-    "url": "https://docs.lahttps://docs.laminas.dev/laminas-i18n-resources/",
+    "url": "https://docs.laminas.dev/laminas-i18n-resources/",
     "group": "Internationalization",
     "description": "Provides validator and captcha translations for laminas-i18n's Translator."
   },
