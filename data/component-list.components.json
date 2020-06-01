@@ -213,14 +213,21 @@
     "name": "JSON",
     "package": "laminas/laminas-json",
     "url": "https://docs.laminas.dev/laminas-json/",
-    "group": "",
+    "group": "JSON",
     "description": "De/Serialize JSON in PHP, including JavaScript expressions."
+  },
+  {
+    "name": "SOAP",
+    "package": "laminas/laminas-soap",
+    "url": "https://docs.laminas.dev/laminas-soap/",
+    "group": "SOAP and RPC",
+    "description": "Create, serve, and access SOAP applications, and parse and generate WSDL."
   },
   {
     "name": "JSON-RPC Server",
     "package": "laminas/laminas-json-server",
     "url": "https://docs.laminas.dev/laminas-json-server/",
-    "group": "RPC",
+    "group": "SOAP and RPC",
     "description": "JSON-RPC implementation for PHP."
   },
   {
@@ -325,7 +332,7 @@
     "name": "Server",
     "package": "laminas/laminas-server",
     "url": "https://docs.laminas.dev/laminas-server/",
-    "group": "RPC",
+    "group": "SOAP and RPC",
     "description": "Create Reflection-based RPC servers."
   },
   {
@@ -350,13 +357,6 @@
     "description": "Object-oriented interface to PHP sessions and storage."
   },
   {
-    "name": "SOAP",
-    "package": "laminas/laminas-soap",
-    "url": "https://docs.laminas.dev/laminas-soap/",
-    "group": "",
-    "description": "Create, serve, and access SOAP applications, and parse and generate WSDL."
-  },
-  {
     "name": "Stdlib",
     "package": "laminas/laminas-stdlib",
     "url": "https://docs.laminas.dev/laminas-stdlib/",
@@ -374,14 +374,14 @@
     "name": "Tag",
     "package": "laminas/laminas-tag",
     "url": "https://docs.laminas.dev/laminas-tag/",
-    "group": "",
+    "group": "Tag and Text",
     "description": "Manipulate and weight taggable items, and create tag clouds."
   },
   {
     "name": "Text",
     "package": "laminas/laminas-text",
     "url": "https://docs.laminas.dev/laminas-text/",
-    "group": "",
+    "group": "Tag and Text",
     "description": "Create FIGlets and text-based tables."
   },
   {
@@ -416,14 +416,14 @@
     "name": "XML-RPC",
     "package": "laminas/laminas-xmlrpc",
     "url": "https://docs.laminas.dev/laminas-xmlrpc/",
-    "group": "RPC",
+    "group": "SOAP and RPC",
     "description": "Fully-featured XML-RPC server and client implementations."
   },
   {
     "name": "XML2JSON",
     "package": "laminas/laminas-xml2json",
     "url": "https://docs.laminas.dev/laminas-xml2json/",
-    "group": "",
+    "group": "JSON",
     "description": "Convert XML documents to JSON."
   },
   {
