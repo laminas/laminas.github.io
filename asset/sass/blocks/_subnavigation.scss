@@ -12,11 +12,6 @@
         }
 
         a {
-            &:link,
-            &:visited {
-                color: $text-color-reduced;
-            }
-
             &:hover {
                 color: $link-color;
             }
@@ -25,7 +20,6 @@
 
     &__subtitle {
         margin: 0 map_get($spacers, 3) map_get($spacers, 3);
-        color: $text-color-reduced;
         font-weight: 300;
 
         @include media-breakpoint-up(sm) {
@@ -34,6 +28,7 @@
 
         @include media-breakpoint-down(sm) {
             margin-top: map_get($spacers, 1);
+            color: $white;
         }
     }
 
@@ -42,7 +37,7 @@
         list-style-type: none;
 
         &-item {
-            border-bottom: 1px solid $separater-color;
+            border-bottom: 1px solid darken($separater-color, 5%);
 
             @include media-breakpoint-down(sm) {
                 border-bottom-color: darken($separater-color, 25%);
@@ -102,13 +97,14 @@
     }
 
     &__headline {
-        border-bottom: 1px solid $separater-color;
+        border-bottom: 1px solid darken($separater-color, 5%);
         padding: map_get($spacers, 2) map_get($spacers, 3);
         display: block;
-        color: lighten($text-color-secondary, 25%);
+        color: lighten($body-color, 30%);
 
         @include media-breakpoint-down(sm) {
             border-bottom-color: darken($separater-color, 25%);
+            color: lighten($body-color, 50%);
         }
     }
 
@@ -118,8 +114,6 @@
 
         &:link,
         &:visited {
-            color: $text-color-secondary;
-
             @include media-breakpoint-down(sm) {
                 color: $white;
             }
