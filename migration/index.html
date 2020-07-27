@@ -220,13 +220,25 @@ $ git commit -m 'Initial import'</code></pre>
 
 <h2 id="install-laminas-migration">2. Install laminas-migration</h2>
 
-<p>There are three ways to install the tool:</p>
+<p>There are two ways to install the tool:</p>
 
 <ol>
     <li>Via a global composer requirement (recommended)</li>
     <li>Via cloning</li>
-    <li>As a local dependency</li>
 </ol>
+
+<blockquote>
+    <h4>Do NOT install locally!</h4>
+
+    <p>
+        While the laminas/laminas-migration package is a Composer package, it
+        cannot be used as a local requirement in your application. Part of its
+        operation is to remove the <code>vendor/</code> subdirectory, which means it
+        removes itself during operation. As classes are loaded dynamically, as
+        needed, this can cause the code to error during later operations when
+        classes are unavailable, leading to a failed migration.
+    </p>
+</blockquote>
 
 <h3 id="via-a-global-composer-requirement">Via a global composer requirement</h3>
 
