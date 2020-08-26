@@ -11,6 +11,9 @@
     .navbar-toggler {
         border: none;
         margin-right: 5px;
+        @include media-breakpoint-down(xs) {
+            margin-right: 0;
+        }
     }
 
     &-brand {
@@ -30,6 +33,10 @@
             @include media-breakpoint-down(sm) {
                 height: 40px;
                 margin-left: 0;
+            }
+
+            @include media-breakpoint-down(xs) {
+                height: 36px;
             }
         }
     }
@@ -54,6 +61,11 @@
         margin-left: 5px;
         margin-right: auto;
         line-height: 1.8;
+
+        @include media-breakpoint-down(xs) {
+            padding-left: -10px;
+            margin-top: -6px;
+        }
 
         &:hover {
             color: transparentize(white, 0.25);
