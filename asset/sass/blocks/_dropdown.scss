@@ -1,5 +1,5 @@
 .dropdown {
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(xs) {
         &:hover > .dropdown-menu {
             display: block;
         }
@@ -12,7 +12,7 @@
         }
     }
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(xs) {
         &.show {
             .dropdown-menu {
                 display: block;
