@@ -1,11 +1,23 @@
 .dropdown {
-    &:hover > .dropdown-menu {
-        display: block;
+    @include media-breakpoint-up(md) {
+        &:hover > .dropdown-menu {
+            display: block;
+        }
     }
+
 
     .dropdown-item {
         @include media-breakpoint-down(xs) {
             white-space: initial;
         }
     }
+
+    @include media-breakpoint-down(md) {
+        &.show {
+            .dropdown-menu {
+                display: block;
+            }
+        }
+    }
+
 }
