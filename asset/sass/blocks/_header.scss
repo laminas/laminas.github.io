@@ -40,13 +40,17 @@
             font-size: 1.2em;
         }
 
-        &--search {
-        }
 
         @include media-breakpoint-down(sm) {
             &--components,
             &--github {
                 display: none;
+            }
+
+            &--search {
+                display: table;
+                padding-left: 0;
+                margin-left: auto;
             }
         }
     }
