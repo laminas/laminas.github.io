@@ -8,4 +8,8 @@
     *:hover > & {
         margin-left: -1.125em !important;
     }
+
+    &:after {
+        display: inline-block;
+    }
 }
