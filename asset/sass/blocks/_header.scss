@@ -46,7 +46,9 @@
             &--github {
                 display: none;
             }
+        }
 
+        @include media-breakpoint-down(xs) {
             &--search {
                 display: table;
                 padding-left: 0;

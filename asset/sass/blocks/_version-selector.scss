@@ -1,6 +1,11 @@
 .version-selector {
     display: inline;
 
+    @include media-breakpoint-down(xs) {
+        display: table;
+        margin-left: auto;
+    }
+
     .dropdown {
         &-toggle {
             padding: 8px 13px;
