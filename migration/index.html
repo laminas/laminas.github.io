@@ -321,11 +321,14 @@ $ alias laminas-migration=/path/to/laminas-migration/bin/laminas-migration</code
     more times for directories to <em>exclude</em> from the rewrite, or the
     <code>--filter</code> or <code>-f</code> option one or more times to provide
     regular expressions of which files to <em>include</em> in the rewrite.
+    <br>
+    This is especially useful if you have folders with large amounts of files (e.g. images or static assets).
+    Excluding such directories can drastically improve the execution time.
 </p>
 
-<p>As an example, to exclude the <code>data/</code> subdirectory, you could run:</p>
+<p>As an example, to exclude the <code>data/</code> and <code>public/images</code> subdirectories, you could run:</p>
 
-<pre class="codehilite"><code class="language-bash">$ laminas-migration migrate -e data</code></pre>
+<pre class="codehilite"><code class="language-bash">$ laminas-migration migrate -e data -e public/images</code></pre>
 
 <blockquote>
     <h4 id="migrating-the-conservative-way">Migrating the conservative way</h4>
