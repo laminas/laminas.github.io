@@ -3,10 +3,11 @@
     margin-left: map_get($spacers, 4);
 
     @media (min-width: 1750px) {
-        margin-top: 6rem;
         margin-left: -20rem;
         margin-bottom: 0;
-        position: fixed;
+        position: sticky;
+        top: 2rem;
+        height: 0;
         border-right: 1px solid $separater-color;
         padding-right: map_get($spacers, 3);
         width: 18rem;
