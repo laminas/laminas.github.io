@@ -294,6 +294,13 @@
     "description": "Paginate collections of data from arbitrary sources."
   },
   {
+    "name": "laminas-db Paginators",
+    "package": "laminas/laminas-paginator-adapter-laminasdb",
+    "url": "https://docs.laminas.dev/laminas-paginator-adapter-laminasdb/",
+    "group": "Pagination adapters for laminas-db",
+    "description": "Paginate result sets from laminas-db Select statements or TableGateway instances."
+  },
+  {
     "name": "ACL",
     "package": "laminas/laminas-permissions-acl",
     "url": "https://docs.laminas.dev/laminas-permissions-acl/",
