@@ -297,7 +297,7 @@
     "name": "laminas-db Paginators",
     "package": "laminas/laminas-paginator-adapter-laminasdb",
     "url": "https://docs.laminas.dev/laminas-paginator-adapter-laminasdb/",
-    "group": "Pagination adapters for laminas-db",
+    "group": "Navigation and Pagination",
     "description": "Paginate result sets from laminas-db Select statements or TableGateway instances."
   },
   {
