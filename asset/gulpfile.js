@@ -4,7 +4,7 @@ const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const GetGoogleFonts = require('get-google-fonts');
 const {parallel, src, dest, watch} = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('node-sass'));
 const terser = require('gulp-terser');
 
 const prism = [
