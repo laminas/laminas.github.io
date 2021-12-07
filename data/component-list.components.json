@@ -49,6 +49,13 @@
     "description": "Extensions to the PHP Reflection API, static code scanning, and code generation."
   },
   {
+    "name": "CLI",
+    "package": "laminas/laminas-cli",
+    "url": "https://docs.laminas.dev/laminas-cli/",
+    "group": "CLI",
+    "description": "Command-line interface for Laminas projects."
+  },
+  {
     "name": "Component Installer",
     "package": "laminas/laminas-component-installer",
     "url": "https://docs.laminas.dev/laminas-component-installer/",
@@ -82,13 +89,6 @@
     "url": "https://docs.laminas.dev/laminas-config-aggregator-parameters/",
     "group": "Config",
     "description": "PostProcessor extension for laminas/laminas-config-aggregator to allow usage of templated parameters within your configuration."
-  },
-  {
-    "name": "Console",
-    "package": "laminas/laminas-console",
-    "url": "https://docs.laminas.dev/laminas-console/",
-    "group": "Deprecated Packages",
-    "description": "[DEPRECATED] Build console applications using getopt syntax or routing, complete with prompts"
   },
   {
     "name": "Crypt",
@@ -348,13 +348,6 @@
     "url": "https://docs.laminas.dev/laminas-servicemanager/",
     "group": "Dependency Injection",
     "description": "Factory-Driven Dependency Injection Container"
-  },
-  {
-    "name": "ServiceManager-Di integration",
-    "package": "laminas/laminas-servicemanager-di",
-    "url": "https://docs.laminas.dev/laminas-servicemanager-di/",
-    "group": "Deprecated Packages",
-    "description": "[DEPRECATED] zend-di integration for zend-servicemanager"
   },
   {
     "name": "Session",
