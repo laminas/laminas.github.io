@@ -49,6 +49,13 @@
     "description": "Extensions to the PHP Reflection API, static code scanning, and code generation."
   },
   {
+    "name": "CLI",
+    "package": "laminas/laminas-cli",
+    "url": "https://docs.laminas.dev/laminas-cli/",
+    "group": "CLI",
+    "description": "Command-line interface for Laminas projects."
+  },
+  {
     "name": "Component Installer",
     "package": "laminas/laminas-component-installer",
     "url": "https://docs.laminas.dev/laminas-component-installer/",
