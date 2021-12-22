@@ -76,16 +76,12 @@ $blockquote-font-size: $font-size-base;
 $border-radius-base: 0;
 
 // Navbar
-$navbar-default-color: $header-footer-font-color;
-$navbar-default-bg: $brand-primary;
+$navbar-dark-color: $header-footer-font-color;
+$navbar-dark-hover-color: white;
+$navbar-dark-active-color: $link-color;
 
-$navbar-default-link-color: $header-footer-font-color;
-$navbar-default-link-hover-color: white;
-$navbar-default-link-hover-bg: darken($brand-primary, 10%);
-$navbar-default-link-active-color: $link-color;
-
-$navbar-default-brand-color: $link-color;
-$navbar-default-brand-hover-color: $header-footer-font-color;
+$navbar-dark-brand-color: $link-color;
+$navbar-dark-brand-hover-color: $header-footer-font-color;
 
 $navbar-margin-bottom: 0;
 
