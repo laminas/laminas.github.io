@@ -1,5 +1,4 @@
 nav[aria-label="breadcrumb"] {
-    color : $text-color-reduced;
     order : -3;
 
     @include media-breakpoint-down(sm) {
