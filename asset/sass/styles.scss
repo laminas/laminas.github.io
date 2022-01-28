@@ -36,3 +36,6 @@
 @import 'blocks/tab';
 @import 'blocks/toc';
 @import 'blocks/version-selector';
+@import 'blocks/docsearch';
+@import '../node_modules/@docsearch/css/dist/button';
+@import '../node_modules/@docsearch/css/dist/modal';
