@@ -15,10 +15,6 @@
     &__item {
         display: table-cell;
 
-        &:first-child {
-            text-align: left;
-        }
-
         &:last-child {
             text-align: right;
         }
@@ -37,5 +33,22 @@
             text-decoration: underline;
             color: $link-color;
         }
+
+        &--prev {
+            & .page-nav__label {
+                margin-left: 15px;
+            }
+        }
+
+        &--next {
+            & .page-nav__label {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__title,
+    &__label {
+        display: block;
     }
 }
