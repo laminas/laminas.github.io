@@ -3,17 +3,17 @@
 }
 
 .components {
-    --primary-color: #E64010;
+    --primary-color: #{map-get($theme-colors, "laminas")};
 }
 
 .mvc {
-    --primary-color: #009EE3;
+    --primary-color: #{map-get($theme-colors, "mvc")};
 }
 
 .mezzio {
-    --primary-color: #009655;
+    --primary-color: #{map-get($theme-colors, "mezzio")};
 }
 
 .api-tools {
-    --primary-color: #E5007D;
+    --primary-color: #{map-get($theme-colors, "api-tools")};
 }
