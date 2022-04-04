@@ -9,21 +9,17 @@
         }
     }
 
-    > a {
-        flex-grow: 1;
+    &:hover {
+        background-color: var(--primary-color);
+        text-decoration: none;
 
-        &:hover {
-            background-color: var(--primary-color);
-            text-decoration: none;
+        &,
+        .text-muted {
+            color: white !important;
+        }
 
-            &,
-            .text-muted {
-                color: white !important;
-            }
-
-            img {
-                filter: brightness(0) invert(1);
-            }
+        img {
+            filter: brightness(0) invert(1);
         }
     }
 }
