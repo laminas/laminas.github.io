@@ -77,7 +77,7 @@ $border-radius-base: 0;
 
 // Navbar
 $navbar-dark-color: $header-footer-font-color;
-$navbar-dark-hover-color: white;
+$navbar-dark-hover-color: transparentize($header-footer-font-color, 0.25);
 $navbar-dark-active-color: transparentize($header-footer-font-color, 0.4);
 
 $navbar-dark-brand-color: $link-color;
