@@ -30,15 +30,15 @@ END;
 const CARD_TEMPLATE = <<< 'END'
 <div class="col mb-4">
     <div class="card h-100">
-        <a href="{url}">
-            <div class="card-header">
+        <div class="card-header">
+            <a href="{url}" class="stretched-link">
                 {package}
-            </div>
-            <div class="card-body">
-                <h5 class="card-title">{name}</h5>
-                <p class="card-text">{description}</p>
-            </div>
-        </a>
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{name}</h5>
+            <p class="card-text">{description}</p>
+        </div>
     </div>
 </div>
 
