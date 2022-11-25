@@ -1,12 +1,5 @@
 [
   {
-    "name": "Tutorials",
-    "package": "laminas/tutorials",
-    "url": "https://docs.laminas.dev/tutorials",
-    "group": "Learn",
-    "description": "Learn how to create zend-mvc applications, get in-depth guides into components, and discover how to migrate your applications to version 3!"
-  },
-  {
     "name": "Authentication",
     "package": "laminas/laminas-authentication",
     "url": "https://docs.laminas.dev/laminas-authentication",
@@ -17,14 +10,14 @@
     "name": "Barcode",
     "package": "laminas/laminas-barcode",
     "url": "https://docs.laminas.dev/laminas-barcode",
-    "group": "",
+    "group": "Utilities",
     "description": "Programmatically create and render barcodes as images or in PDFs."
   },
   {
     "name": "Cache",
     "package": "laminas/laminas-cache",
     "url": "https://docs.laminas.dev/laminas-cache/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Caching implementation with a variety of storage options, as well as codified caching strategies for callbacks, classes, and output."
   },
   {
@@ -45,49 +38,49 @@
     "name": "Code",
     "package": "laminas/laminas-code",
     "url": "https://docs.laminas.dev/laminas-code/",
-    "group": "",
+    "group": "Code Generation",
     "description": "Extensions to the PHP Reflection API, static code scanning, and code generation."
   },
   {
     "name": "CLI",
     "package": "laminas/laminas-cli",
     "url": "https://docs.laminas.dev/laminas-cli/",
-    "group": "CLI",
+    "group": "Tooling",
     "description": "Command-line interface for Laminas projects."
   },
   {
     "name": "Component Installer",
     "package": "laminas/laminas-component-installer",
     "url": "https://docs.laminas.dev/laminas-component-installer/",
-    "group": "Projects",
+    "group": "Tooling",
     "description": "Composer plugin for injecting modules and configuration providers into application configuration."
   },
   {
     "name": "Config",
     "package": "laminas/laminas-config",
     "url": "https://docs.laminas.dev/laminas-config/",
-    "group": "Config",
+    "group": "Configuration",
     "description": "Read and write configuration files."
   },
   {
     "name": "ConfigAggregator",
     "package": "laminas/laminas-config-aggregator",
     "url": "https://docs.laminas.dev/laminas-config-aggregator/",
-    "group": "Config",
+    "group": "Configuration",
     "description": "Lightweight library for collecting and merging configuration from different sources."
   },
   {
     "name": "ConfigAggregator ModuleManager Plugin",
     "package": "laminas/laminas-config-aggregator-modulemanager",
     "url": "https://docs.laminas.dev/laminas-config-aggregator-modulemanager/",
-    "group": "Config",
+    "group": "Configuration",
     "description": "Consume zend-mvc modules as configuration providers within zend-config-aggregator."
   },
   {
     "name": "ConfigAggregator Templated Parameters PostProcessor",
     "package": "laminas/laminas-config-aggregator-parameters",
     "url": "https://docs.laminas.dev/laminas-config-aggregator-parameters/",
-    "group": "Config",
+    "group": "Configuration",
     "description": "PostProcessor extension for laminas/laminas-config-aggregator to allow usage of templated parameters within your configuration."
   },
   {
@@ -101,7 +94,7 @@
     "name": "DB",
     "package": "laminas/laminas-db",
     "url": "https://docs.laminas.dev/laminas-db/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Database abstraction layer, SQL abstraction, result set abstraction, and RowDataGateway and TableDataGateway implementations."
   },
   {
@@ -115,42 +108,42 @@
     "name": "Diactoros",
     "package": "laminas/laminas-diactoros",
     "url": "https://docs.laminas.dev/laminas-diactoros/",
-    "group": "Middleware",
+    "group": "Middleware (PSR-7, PSR-15, PSR-17)",
     "description": "PSR-7 HTTP message implementations."
   },
   {
     "name": "DOM",
     "package": "laminas/laminas-dom",
     "url": "https://docs.laminas.dev/laminas-dom/",
-    "group": "",
+    "group": "HTML, CSS and JS",
     "description": "Query HTML and XML documents using XPath or CSS selectors."
   },
   {
     "name": "Escaper",
     "package": "laminas/laminas-escaper",
     "url": "https://docs.laminas.dev/laminas-escaper/",
-    "group": "Security",
+    "group": "HTML, CSS and JS",
     "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs."
   },
   {
     "name": "EventManager",
     "package": "laminas/laminas-eventmanager",
     "url": "https://docs.laminas.dev/laminas-eventmanager/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Implement events, signal slots, aspects, and observers!"
   },
   {
     "name": "Feed",
     "package": "laminas/laminas-feed",
     "url": "https://docs.laminas.dev/laminas-feed/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Consume and generate Atom and RSS feeds, and interact with Pubsubhubbub."
   },
   {
     "name": "File",
     "package": "laminas/laminas-file",
     "url": "https://docs.laminas.dev/laminas-file/",
-    "group": "",
+    "group": "Utilities",
     "description": "Locate PHP classfiles."
   },
   {
@@ -164,7 +157,7 @@
     "name": "Form",
     "package": "laminas/laminas-form",
     "url": "https://docs.laminas.dev/laminas-form/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Validate and display simple and complex forms, casting forms to business objects and vice versa."
   },
   {
@@ -178,14 +171,14 @@
     "name": "HTTP Request Handler Runner",
     "package": "laminas/laminas-httphandlerrunner",
     "url": "https://docs.laminas.dev/laminas-httphandlerrunner/",
-    "group": "HTTP and URI",
+    "group": "Middleware (PSR-7, PSR-15, PSR-17)",
     "description": "Execute PSR-15 RequestHandlerInterface instances and emit responses they generate."
   },
   {
     "name": "Hydrator",
     "package": "laminas/laminas-hydrator",
     "url": "https://docs.laminas.dev/laminas-hydrator/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Serialize objects to arrays, and vice versa."
   },
   {
@@ -213,7 +206,7 @@
     "name": "JSON",
     "package": "laminas/laminas-json",
     "url": "https://docs.laminas.dev/laminas-json/",
-    "group": "JSON",
+    "group": "JSON and XML",
     "description": "De/Serialize JSON in PHP, including JavaScript expressions."
   },
   {
@@ -241,14 +234,14 @@
     "name": "Loader",
     "package": "laminas/laminas-loader",
     "url": "https://docs.laminas.dev/laminas-loader/",
-    "group": "",
+    "group": "Utilities",
     "description": "Autoloading and plugin loading strategies."
   },
   {
     "name": "Log",
     "package": "laminas/laminas-log",
     "url": "https://docs.laminas.dev/laminas-log/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Robust, composite logger with filtering, formatting, and PSR-3 support."
   },
   {
@@ -262,14 +255,14 @@
     "name": "Math",
     "package": "laminas/laminas-math",
     "url": "https://docs.laminas.dev/laminas-math/",
-    "group": "",
+    "group": "Utilities",
     "description": "Create cryptographically secure pseudo-random numbers, and manage big integers."
   },
   {
     "name": "Memory",
     "package": "laminas/laminas-memory",
     "url": "https://docs.laminas.dev/laminas-memory/",
-    "group": "",
+    "group": "Utilities",
     "description": "Manage data in an environment with limited memory."
   },
   {
@@ -318,21 +311,21 @@
     "name": "ProgressBar",
     "package": "laminas/laminas-progressbar",
     "url": "https://docs.laminas.dev/laminas-progressbar/",
-    "group": "",
+    "group": "Utilities",
     "description": "Create and update progress bars in different environments."
   },
   {
     "name": "Router",
     "package": "laminas/laminas-router",
     "url": "https://docs.laminas.dev/laminas-router/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Flexible routing system for HTTP and console applications."
   },
   {
     "name": "Serializer",
     "package": "laminas/laminas-serializer",
     "url": "https://docs.laminas.dev/laminas-serializer/",
-    "group": "",
+    "group": "Utilities",
     "description": "Serialize and deserialize PHP structures to a variety of representations."
   },
   {
@@ -353,21 +346,21 @@
     "name": "Session",
     "package": "laminas/laminas-session",
     "url": "https://docs.laminas.dev/laminas-session/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Object-oriented interface to PHP sessions and storage."
   },
   {
     "name": "Stdlib",
     "package": "laminas/laminas-stdlib",
     "url": "https://docs.laminas.dev/laminas-stdlib/",
-    "group": "",
+    "group": "Utilities",
     "description": "SPL extensions, array utilities, error handlers, and more."
   },
   {
     "name": "Stratigility",
     "package": "laminas/laminas-stratigility",
     "url": "https://docs.laminas.dev/laminas-stratigility/",
-    "group": "Middleware",
+    "group": "Middleware (PSR-7, PSR-15, PSR-17)",
     "description": "PSR-7 middleware foundation for building and dispatching middleware pipelines."
   },
   {
@@ -388,7 +381,7 @@
     "name": "Twitter",
     "package": "laminas/laminas-twitter",
     "url": "https://docs.laminas.dev/laminas-twitter/",
-    "group": "",
+    "group": "Services",
     "description": "Consume and exercise the Twitter API."
   },
   {
@@ -409,7 +402,7 @@
     "name": "View",
     "package": "laminas/laminas-view",
     "url": "https://docs.laminas.dev/laminas-view/",
-    "group": "",
+    "group": "Basic Essentials",
     "description": "Flexible view layer supporting and providing multiple view layers, helpers, and more."
   },
   {
@@ -423,14 +416,14 @@
     "name": "XML2JSON",
     "package": "laminas/laminas-xml2json",
     "url": "https://docs.laminas.dev/laminas-xml2json/",
-    "group": "JSON",
+    "group": "JSON and XML",
     "description": "Convert XML documents to JSON."
   },
   {
     "name": "Diagnostics",
     "package": "laminas/laminas-diagnostics",
     "url": "https://docs.laminas.dev/laminas-diagnostics/",
-    "group": "",
+    "group": "Tooling",
     "description": "Universal set of diagnostic tests for PHP applications."
   }
 ]

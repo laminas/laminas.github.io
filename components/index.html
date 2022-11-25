@@ -137,55 +137,47 @@
 <div class="toc">
     <h6 class="toc__headline">On this page</h6>
     <ul class="toc__list"><li class="toc__entry">
-    <a href="#cli" class="toc__link nav-link">CLI</a>
+    <a href="#basic-essentials" class="toc__link nav-link">Basic Essentials</a>
 </li><li class="toc__entry">
-    <a href="#config" class="toc__link nav-link">Config</a>
+    <a href="#code-generation" class="toc__link nav-link">Code Generation</a>
+</li><li class="toc__entry">
+    <a href="#configuration" class="toc__link nav-link">Configuration</a>
 </li><li class="toc__entry">
     <a href="#dependency-injection" class="toc__link nav-link">Dependency Injection</a>
 </li><li class="toc__entry">
     <a href="#filtering-and-validation" class="toc__link nav-link">Filtering and Validation</a>
 </li><li class="toc__entry">
+    <a href="#html-css-and-js" class="toc__link nav-link">HTML, CSS and JS</a>
+</li><li class="toc__entry">
     <a href="#http-and-uri" class="toc__link nav-link">HTTP and URI</a>
 </li><li class="toc__entry">
     <a href="#internationalization" class="toc__link nav-link">Internationalization</a>
 </li><li class="toc__entry">
-    <a href="#json" class="toc__link nav-link">JSON</a>
-</li><li class="toc__entry">
-    <a href="#learn" class="toc__link nav-link">Learn</a>
+    <a href="#json-and-xml" class="toc__link nav-link">JSON and XML</a>
 </li><li class="toc__entry">
     <a href="#mail-and-mime-messages" class="toc__link nav-link">Mail and MIME messages</a>
 </li><li class="toc__entry">
-    <a href="#middleware" class="toc__link nav-link">Middleware</a>
+    <a href="#middleware-psr-7-psr-15-psr-17" class="toc__link nav-link">Middleware (PSR-7, PSR-15, PSR-17)</a>
 </li><li class="toc__entry">
     <a href="#navigation-and-pagination" class="toc__link nav-link">Navigation and Pagination</a>
 </li><li class="toc__entry">
     <a href="#permissions" class="toc__link nav-link">Permissions</a>
 </li><li class="toc__entry">
-    <a href="#projects" class="toc__link nav-link">Projects</a>
-</li><li class="toc__entry">
     <a href="#soap-and-rpc" class="toc__link nav-link">SOAP and RPC</a>
 </li><li class="toc__entry">
     <a href="#security" class="toc__link nav-link">Security</a>
 </li><li class="toc__entry">
+    <a href="#services" class="toc__link nav-link">Services</a>
+</li><li class="toc__entry">
     <a href="#tag-and-text" class="toc__link nav-link">Tag and Text</a>
+</li><li class="toc__entry">
+    <a href="#tooling" class="toc__link nav-link">Tooling</a>
+</li><li class="toc__entry">
+    <a href="#utilities" class="toc__link nav-link">Utilities</a>
 </li></ul>
 </div>
-
+<h4 id="basic-essentials">Basic Essentials</h4>
 <div class="row row-cols-1 row-cols-md-2">
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-barcode" class="stretched-link">
-                laminas/laminas-barcode
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Barcode</h5>
-            <p class="card-text">Programmatically create and render barcodes as images or in PDFs.</p>
-        </div>
-    </div>
-</div>
-
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
@@ -203,20 +195,6 @@
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-code/" class="stretched-link">
-                laminas/laminas-code
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Code</h5>
-            <p class="card-text">Extensions to the PHP Reflection API, static code scanning, and code generation.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
             <a href="https://docs.laminas.dev/laminas-db/" class="stretched-link">
                 laminas/laminas-db
             </a>
@@ -224,20 +202,6 @@
         <div class="card-body">
             <h5 class="card-title">DB</h5>
             <p class="card-text">Database abstraction layer, SQL abstraction, result set abstraction, and RowDataGateway and TableDataGateway implementations.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-dom/" class="stretched-link">
-                laminas/laminas-dom
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">DOM</h5>
-            <p class="card-text">Query HTML and XML documents using XPath or CSS selectors.</p>
         </div>
     </div>
 </div>
@@ -273,20 +237,6 @@
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-file/" class="stretched-link">
-                laminas/laminas-file
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">File</h5>
-            <p class="card-text">Locate PHP classfiles.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
             <a href="https://docs.laminas.dev/laminas-form/" class="stretched-link">
                 laminas/laminas-form
             </a>
@@ -315,20 +265,6 @@
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-loader/" class="stretched-link">
-                laminas/laminas-loader
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Loader</h5>
-            <p class="card-text">Autoloading and plugin loading strategies.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
             <a href="https://docs.laminas.dev/laminas-log/" class="stretched-link">
                 laminas/laminas-log
             </a>
@@ -336,48 +272,6 @@
         <div class="card-body">
             <h5 class="card-title">Log</h5>
             <p class="card-text">Robust, composite logger with filtering, formatting, and PSR-3 support.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-math/" class="stretched-link">
-                laminas/laminas-math
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Math</h5>
-            <p class="card-text">Create cryptographically secure pseudo-random numbers, and manage big integers.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-memory/" class="stretched-link">
-                laminas/laminas-memory
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Memory</h5>
-            <p class="card-text">Manage data in an environment with limited memory.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-progressbar/" class="stretched-link">
-                laminas/laminas-progressbar
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">ProgressBar</h5>
-            <p class="card-text">Create and update progress bars in different environments.</p>
         </div>
     </div>
 </div>
@@ -399,20 +293,6 @@
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-serializer/" class="stretched-link">
-                laminas/laminas-serializer
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Serializer</h5>
-            <p class="card-text">Serialize and deserialize PHP structures to a variety of representations.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
             <a href="https://docs.laminas.dev/laminas-session/" class="stretched-link">
                 laminas/laminas-session
             </a>
@@ -420,34 +300,6 @@
         <div class="card-body">
             <h5 class="card-title">Session</h5>
             <p class="card-text">Object-oriented interface to PHP sessions and storage.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-stdlib/" class="stretched-link">
-                laminas/laminas-stdlib
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Stdlib</h5>
-            <p class="card-text">SPL extensions, array utilities, error handlers, and more.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-twitter/" class="stretched-link">
-                laminas/laminas-twitter
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Twitter</h5>
-            <p class="card-text">Consume and exercise the Twitter API.</p>
         </div>
     </div>
 </div>
@@ -466,37 +318,23 @@
     </div>
 </div>
 
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-diagnostics/" class="stretched-link">
-                laminas/laminas-diagnostics
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Diagnostics</h5>
-            <p class="card-text">Universal set of diagnostic tests for PHP applications.</p>
-        </div>
-    </div>
-</div>
-
-</div><h4 id="cli">CLI</h4>
+</div><h4 id="code-generation">Code Generation</h4>
 <div class="row row-cols-1 row-cols-md-2">
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-cli/" class="stretched-link">
-                laminas/laminas-cli
+            <a href="https://docs.laminas.dev/laminas-code/" class="stretched-link">
+                laminas/laminas-code
             </a>
         </div>
         <div class="card-body">
-            <h5 class="card-title">CLI</h5>
-            <p class="card-text">Command-line interface for Laminas projects.</p>
+            <h5 class="card-title">Code</h5>
+            <p class="card-text">Extensions to the PHP Reflection API, static code scanning, and code generation.</p>
         </div>
     </div>
 </div>
 
-</div><h4 id="config">Config</h4>
+</div><h4 id="configuration">Configuration</h4>
 <div class="row row-cols-1 row-cols-md-2">
 <div class="col mb-4">
     <div class="card h-100">
@@ -628,6 +466,36 @@
     </div>
 </div>
 
+</div><h4 id="html-css-and-js">HTML, CSS and JS</h4>
+<div class="row row-cols-1 row-cols-md-2">
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-dom/" class="stretched-link">
+                laminas/laminas-dom
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">DOM</h5>
+            <p class="card-text">Query HTML and XML documents using XPath or CSS selectors.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-escaper/" class="stretched-link">
+                laminas/laminas-escaper
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Escaper</h5>
+            <p class="card-text">Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs.</p>
+        </div>
+    </div>
+</div>
+
 </div><h4 id="http-and-uri">HTTP and URI</h4>
 <div class="row row-cols-1 row-cols-md-2">
 <div class="col mb-4">
@@ -640,20 +508,6 @@
         <div class="card-body">
             <h5 class="card-title">HTTP</h5>
             <p class="card-text">HTTP message and header abstractions, and HTTP client implementation.  (Not a PSR-7 implementation.)</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-httphandlerrunner/" class="stretched-link">
-                laminas/laminas-httphandlerrunner
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">HTTP Request Handler Runner</h5>
-            <p class="card-text">Execute PSR-15 RequestHandlerInterface instances and emit responses they generate.</p>
         </div>
     </div>
 </div>
@@ -702,7 +556,7 @@
     </div>
 </div>
 
-</div><h4 id="json">JSON</h4>
+</div><h4 id="json-and-xml">JSON and XML</h4>
 <div class="row row-cols-1 row-cols-md-2">
 <div class="col mb-4">
     <div class="card h-100">
@@ -728,22 +582,6 @@
         <div class="card-body">
             <h5 class="card-title">XML2JSON</h5>
             <p class="card-text">Convert XML documents to JSON.</p>
-        </div>
-    </div>
-</div>
-
-</div><h4 id="learn">Learn</h4>
-<div class="row row-cols-1 row-cols-md-2">
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/tutorials" class="stretched-link">
-                laminas/tutorials
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Tutorials</h5>
-            <p class="card-text">Learn how to create zend-mvc applications, get in-depth guides into components, and discover how to migrate your applications to version 3!</p>
         </div>
     </div>
 </div>
@@ -778,7 +616,7 @@
     </div>
 </div>
 
-</div><h4 id="middleware">Middleware</h4>
+</div><h4 id="middleware-psr-7-psr-15-psr-17">Middleware (PSR-7, PSR-15, PSR-17)</h4>
 <div class="row row-cols-1 row-cols-md-2">
 <div class="col mb-4">
     <div class="card h-100">
@@ -790,6 +628,20 @@
         <div class="card-body">
             <h5 class="card-title">Diactoros</h5>
             <p class="card-text">PSR-7 HTTP message implementations.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-httphandlerrunner/" class="stretched-link">
+                laminas/laminas-httphandlerrunner
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">HTTP Request Handler Runner</h5>
+            <p class="card-text">Execute PSR-15 RequestHandlerInterface instances and emit responses they generate.</p>
         </div>
     </div>
 </div>
@@ -878,22 +730,6 @@
         <div class="card-body">
             <h5 class="card-title">RBAC</h5>
             <p class="card-text">Provide and query Role-Based Access Controls for your application.</p>
-        </div>
-    </div>
-</div>
-
-</div><h4 id="projects">Projects</h4>
-<div class="row row-cols-1 row-cols-md-2">
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-component-installer/" class="stretched-link">
-                laminas/laminas-component-installer
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Component Installer</h5>
-            <p class="card-text">Composer plugin for injecting modules and configuration providers into application configuration.</p>
         </div>
     </div>
 </div>
@@ -1017,20 +853,6 @@
 <div class="col mb-4">
     <div class="card h-100">
         <div class="card-header">
-            <a href="https://docs.laminas.dev/laminas-escaper/" class="stretched-link">
-                laminas/laminas-escaper
-            </a>
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Escaper</h5>
-            <p class="card-text">Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col mb-4">
-    <div class="card h-100">
-        <div class="card-header">
             <a href="https://docs.laminas.dev/laminas-ldap/" class="stretched-link">
                 laminas/laminas-ldap
             </a>
@@ -1038,6 +860,22 @@
         <div class="card-body">
             <h5 class="card-title">LDAP</h5>
             <p class="card-text">Perform LDAP operations, including binding, searching and modifying entries in an LDAP directory.</p>
+        </div>
+    </div>
+</div>
+
+</div><h4 id="services">Services</h4>
+<div class="row row-cols-1 row-cols-md-2">
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-twitter/" class="stretched-link">
+                laminas/laminas-twitter
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Twitter</h5>
+            <p class="card-text">Consume and exercise the Twitter API.</p>
         </div>
     </div>
 </div>
@@ -1068,6 +906,164 @@
         <div class="card-body">
             <h5 class="card-title">Text</h5>
             <p class="card-text">Create FIGlets and text-based tables.</p>
+        </div>
+    </div>
+</div>
+
+</div><h4 id="tooling">Tooling</h4>
+<div class="row row-cols-1 row-cols-md-2">
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-cli/" class="stretched-link">
+                laminas/laminas-cli
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">CLI</h5>
+            <p class="card-text">Command-line interface for Laminas projects.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-component-installer/" class="stretched-link">
+                laminas/laminas-component-installer
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Component Installer</h5>
+            <p class="card-text">Composer plugin for injecting modules and configuration providers into application configuration.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-diagnostics/" class="stretched-link">
+                laminas/laminas-diagnostics
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Diagnostics</h5>
+            <p class="card-text">Universal set of diagnostic tests for PHP applications.</p>
+        </div>
+    </div>
+</div>
+
+</div><h4 id="utilities">Utilities</h4>
+<div class="row row-cols-1 row-cols-md-2">
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-barcode" class="stretched-link">
+                laminas/laminas-barcode
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Barcode</h5>
+            <p class="card-text">Programmatically create and render barcodes as images or in PDFs.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-file/" class="stretched-link">
+                laminas/laminas-file
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">File</h5>
+            <p class="card-text">Locate PHP classfiles.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-loader/" class="stretched-link">
+                laminas/laminas-loader
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Loader</h5>
+            <p class="card-text">Autoloading and plugin loading strategies.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-math/" class="stretched-link">
+                laminas/laminas-math
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Math</h5>
+            <p class="card-text">Create cryptographically secure pseudo-random numbers, and manage big integers.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-memory/" class="stretched-link">
+                laminas/laminas-memory
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Memory</h5>
+            <p class="card-text">Manage data in an environment with limited memory.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-progressbar/" class="stretched-link">
+                laminas/laminas-progressbar
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">ProgressBar</h5>
+            <p class="card-text">Create and update progress bars in different environments.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-serializer/" class="stretched-link">
+                laminas/laminas-serializer
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Serializer</h5>
+            <p class="card-text">Serialize and deserialize PHP structures to a variety of representations.</p>
+        </div>
+    </div>
+</div>
+
+<div class="col mb-4">
+    <div class="card h-100">
+        <div class="card-header">
+            <a href="https://docs.laminas.dev/laminas-stdlib/" class="stretched-link">
+                laminas/laminas-stdlib
+            </a>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Stdlib</h5>
+            <p class="card-text">SPL extensions, array utilities, error handlers, and more.</p>
         </div>
     </div>
 </div>
