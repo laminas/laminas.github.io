@@ -66,7 +66,6 @@ const TOC_ITEM = <<< 'END'
 </li>
 END;
 
-
 function preparePackage(array $package) : string
 {
     $card = CARD_TEMPLATE;
@@ -191,7 +190,7 @@ function prepareTocItem(string $name) : string
 
 function filterAnchorName(string $name) : string
 {
-    return str_replace(' ', '-', strtolower($name));
+    return str_replace([' ', ',', '(', ')'], ['-', '', ''], strtolower($name));
 }
 
 chdir(dirname(__DIR__));
