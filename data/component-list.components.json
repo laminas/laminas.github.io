@@ -378,13 +378,6 @@
     "description": "Create FIGlets and text-based tables."
   },
   {
-    "name": "Twitter",
-    "package": "laminas/laminas-twitter",
-    "url": "https://docs.laminas.dev/laminas-twitter/",
-    "group": "Services",
-    "description": "Consume and exercise the Twitter API."
-  },
-  {
     "name": "URI",
     "package": "laminas/laminas-uri",
     "url": "https://docs.laminas.dev/laminas-uri/",
