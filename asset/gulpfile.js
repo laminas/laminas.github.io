@@ -2,9 +2,8 @@
 
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
-const GetGoogleFonts = require('get-google-fonts');
 const {parallel, src, dest, watch} = require('gulp');
-const sass = require('gulp-sass')(require('node-sass'));
+const sass = require('gulp-dart-sass');
 const terser = require('gulp-terser');
 
 const prism = [
@@ -48,29 +47,6 @@ function images() {
         .pipe(dest('../img/'));
 }
 
-function fonts() {
-    /*new GetGoogleFonts().download(
-        'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Quicksand:400,700&display=swap',
-        {
-            path: 'fonts/',
-            outputDir: 'fonts',
-            strictSSL: false,
-            verbose: true
-        }
-    ).then(() => {
-        console.log('Done!')
-    }).catch(() => {
-        console.log('Whoops!')
-    });*/
-
-    return src([
-        'node_modules/font-awesome/fonts/**.*',
-        /*'fonts/!**.*',
-        '!fonts/fonts.css',*/
-    ])
-        .pipe(dest('../css/fonts'));
-}
-
 function js() {
     let prismComponents = [];
     prism.forEach(component => prismComponents.push('node_modules/prismjs/components/prism-' + component + '.js'));
@@ -111,11 +87,10 @@ function css() {
 exports.js = js;
 exports.css = css;
 exports.images = images;
-exports.fonts = fonts;
 exports.watch = () => {
     watch('js/**/*.js', js);
     watch('sass/**/*.scss', css);
 };
 exports.default = (done) => {
-    parallel(js, fonts, css, images)(done);
+    parallel(js, css, images)(done);
 };
