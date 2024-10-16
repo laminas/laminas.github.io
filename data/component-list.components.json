@@ -28,6 +28,13 @@
     "description": "Generate and validate CAPTCHAs using Figlets, images, ReCaptcha, and more."
   },
   {
+    "name": "Coding Standard",
+    "package": "laminas/laminas-coding-standard",
+    "url": "https://docs.laminas.dev/laminas-coding-standard/",
+    "group": "Tooling",
+    "description": "The coding standard ruleset for Laminas components."
+  },
+  {
     "name": "ReCaptcha",
     "package": "laminas/laminas-recaptcha",
     "url": "https://docs.laminas.dev/laminas-recaptcha/",
