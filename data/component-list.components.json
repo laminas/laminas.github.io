@@ -77,25 +77,11 @@
     "description": "Lightweight library for collecting and merging configuration from different sources."
   },
   {
-    "name": "ConfigAggregator ModuleManager Plugin",
-    "package": "laminas/laminas-config-aggregator-modulemanager",
-    "url": "https://docs.laminas.dev/laminas-config-aggregator-modulemanager/",
-    "group": "Configuration",
-    "description": "Consume zend-mvc modules as configuration providers within zend-config-aggregator."
-  },
-  {
     "name": "ConfigAggregator Templated Parameters PostProcessor",
     "package": "laminas/laminas-config-aggregator-parameters",
     "url": "https://docs.laminas.dev/laminas-config-aggregator-parameters/",
     "group": "Configuration",
     "description": "PostProcessor extension for laminas/laminas-config-aggregator to allow usage of templated parameters within your configuration."
-  },
-  {
-    "name": "Crypt",
-    "package": "laminas/laminas-crypt",
-    "url": "https://docs.laminas.dev/laminas-crypt/",
-    "group": "Security",
-    "description": "Strong cryptography tools and password hashing."
   },
   {
     "name": "DB",
@@ -119,17 +105,10 @@
     "description": "PSR-7 HTTP message implementations."
   },
   {
-    "name": "DOM",
-    "package": "laminas/laminas-dom",
-    "url": "https://docs.laminas.dev/laminas-dom/",
-    "group": "HTML, CSS and JS",
-    "description": "Query HTML and XML documents using XPath or CSS selectors."
-  },
-  {
     "name": "Escaper",
     "package": "laminas/laminas-escaper",
     "url": "https://docs.laminas.dev/laminas-escaper/",
-    "group": "HTML, CSS and JS",
+    "group": "Security",
     "description": "Securely and safely escape HTML, HTML attributes, JavaScript, CSS, and URLs."
   },
   {
@@ -145,13 +124,6 @@
     "url": "https://docs.laminas.dev/laminas-feed/",
     "group": "Basic Essentials",
     "description": "Consume and generate Atom and RSS feeds, and interact with Pubsubhubbub."
-  },
-  {
-    "name": "File",
-    "package": "laminas/laminas-file",
-    "url": "https://docs.laminas.dev/laminas-file/",
-    "group": "Utilities",
-    "description": "Locate PHP classfiles."
   },
   {
     "name": "Filter",
@@ -210,13 +182,6 @@
     "description": "Provides validator and captcha translations for laminas-i18n's Translator."
   },
   {
-    "name": "JSON",
-    "package": "laminas/laminas-json",
-    "url": "https://docs.laminas.dev/laminas-json/",
-    "group": "JSON and XML",
-    "description": "De/Serialize JSON in PHP, including JavaScript expressions."
-  },
-  {
     "name": "SOAP",
     "package": "laminas/laminas-soap",
     "url": "https://docs.laminas.dev/laminas-soap/",
@@ -238,48 +203,6 @@
     "description": "Perform LDAP operations, including binding, searching and modifying entries in an LDAP directory."
   },
   {
-    "name": "Loader",
-    "package": "laminas/laminas-loader",
-    "url": "https://docs.laminas.dev/laminas-loader/",
-    "group": "Utilities",
-    "description": "Autoloading and plugin loading strategies."
-  },
-  {
-    "name": "Log",
-    "package": "laminas/laminas-log",
-    "url": "https://docs.laminas.dev/laminas-log/",
-    "group": "Basic Essentials",
-    "description": "Robust, composite logger with filtering, formatting, and PSR-3 support."
-  },
-  {
-    "name": "Mail",
-    "package": "laminas/laminas-mail",
-    "url": "https://docs.laminas.dev/laminas-mail/",
-    "group": "Mail and MIME messages",
-    "description": "Parse, create, store, and send email messages, using a variety of storage and transport protocols."
-  },
-  {
-    "name": "Math",
-    "package": "laminas/laminas-math",
-    "url": "https://docs.laminas.dev/laminas-math/",
-    "group": "Utilities",
-    "description": "Create cryptographically secure pseudo-random numbers, and manage big integers."
-  },
-  {
-    "name": "Memory",
-    "package": "laminas/laminas-memory",
-    "url": "https://docs.laminas.dev/laminas-memory/",
-    "group": "Utilities",
-    "description": "Manage data in an environment with limited memory."
-  },
-  {
-    "name": "MIME",
-    "package": "laminas/laminas-mime",
-    "url": "https://docs.laminas.dev/laminas-mime/",
-    "group": "Mail and MIME messages",
-    "description": "Create and parse MIME messages and parts."
-  },
-  {
     "name": "Navigation",
     "package": "laminas/laminas-navigation",
     "url": "https://docs.laminas.dev/laminas-navigation/",
@@ -294,13 +217,6 @@
     "description": "Paginate collections of data from arbitrary sources."
   },
   {
-    "name": "laminas-db Paginators",
-    "package": "laminas/laminas-paginator-adapter-laminasdb",
-    "url": "https://docs.laminas.dev/laminas-paginator-adapter-laminasdb/",
-    "group": "Navigation and Pagination",
-    "description": "Paginate result sets from laminas-db Select statements or TableGateway instances."
-  },
-  {
     "name": "ACL",
     "package": "laminas/laminas-permissions-acl",
     "url": "https://docs.laminas.dev/laminas-permissions-acl/",
@@ -313,13 +229,6 @@
     "url": "https://docs.laminas.dev/laminas-permissions-rbac/",
     "group": "Permissions",
     "description": "Provide and query Role-Based Access Controls for your application."
-  },
-  {
-    "name": "ProgressBar",
-    "package": "laminas/laminas-progressbar",
-    "url": "https://docs.laminas.dev/laminas-progressbar/",
-    "group": "Utilities",
-    "description": "Create and update progress bars in different environments."
   },
   {
     "name": "Router",
@@ -374,15 +283,8 @@
     "name": "Tag",
     "package": "laminas/laminas-tag",
     "url": "https://docs.laminas.dev/laminas-tag/",
-    "group": "Tag and Text",
+    "group": "Utilities",
     "description": "Manipulate and weight taggable items, and create tag clouds."
-  },
-  {
-    "name": "Text",
-    "package": "laminas/laminas-text",
-    "url": "https://docs.laminas.dev/laminas-text/",
-    "group": "Tag and Text",
-    "description": "Create FIGlets and text-based tables."
   },
   {
     "name": "URI",
@@ -416,7 +318,7 @@
     "name": "XML2JSON",
     "package": "laminas/laminas-xml2json",
     "url": "https://docs.laminas.dev/laminas-xml2json/",
-    "group": "JSON and XML",
+    "group": "Utilities",
     "description": "Convert XML documents to JSON."
   },
   {
