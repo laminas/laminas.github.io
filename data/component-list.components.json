@@ -63,13 +63,6 @@
     "description": "Composer plugin for injecting modules and configuration providers into application configuration."
   },
   {
-    "name": "Config",
-    "package": "laminas/laminas-config",
-    "url": "https://docs.laminas.dev/laminas-config/",
-    "group": "Configuration",
-    "description": "Read and write configuration files."
-  },
-  {
     "name": "ConfigAggregator",
     "package": "laminas/laminas-config-aggregator",
     "url": "https://docs.laminas.dev/laminas-config-aggregator/",
