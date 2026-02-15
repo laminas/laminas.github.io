@@ -22,4 +22,10 @@
             filter: brightness(0) invert(1);
         }
     }
+
+    &.mezzio {
+        img {
+            margin: 3.4rem 3rem
+        }
+    }
 }
