@@ -20,7 +20,7 @@
         "@babel/core": "^7.16.0",
         "@babel/preset-env": "^7.16.4",
         "@docsearch/css": "alpha",
-        "anchor-js": "^4.3.1",
+        "anchor-js": "^5.0.0",
         "bootstrap": "^4.6.1",
         "choices.js": "^9.0.1",
         "gulp": "^4.0.2",
