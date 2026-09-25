@@ -22,6 +22,7 @@
     }
 
     img {
-        width: 60%;
+        background-color: $white;
+        padding: map_get($spacers, 3);
     }
 }
