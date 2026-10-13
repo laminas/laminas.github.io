@@ -22,7 +22,7 @@
         "@docsearch/css": "alpha",
         "anchor-js": "^4.3.1",
         "bootstrap": "^4.6.1",
-        "choices.js": "^9.0.1",
+        "choices.js": "^11.0.0",
         "gulp": "^4.0.2",
         "gulp-babel": "^8.0.0",
         "gulp-concat": "^2.6.1",
