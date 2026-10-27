@@ -17,7 +17,7 @@
     },
     "homepage": "https://getlaminas.org/",
     "devDependencies": {
-        "@babel/core": "^7.16.0",
+        "@babel/core": "^8.0.0",
         "@babel/preset-env": "^7.16.4",
         "@docsearch/css": "alpha",
         "anchor-js": "^4.3.1",
